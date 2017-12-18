@@ -18,7 +18,6 @@
       * [终端](first-setup/connect/mission-planner/terminal.md)
     * [CUAV Hfight](first-setup/connect/cuav-hfight.md)
  * [组装飞行器](first-setup/assermbly.md)
-    * [硬件安装和接线](first-setup/assermbly/quick-start.md)
  * [硬件设置和校准](javascript:;)
     * [2.遥控器校准](calibration/rc-calibration.md)
     * [3.GPS罗盘校准](calibration/compass-calibration.md)
