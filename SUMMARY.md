@@ -3,6 +3,7 @@
 * [固定翼飞行器教程](README.md)
 
 * [第一次设置](javascript:;)
+
   * [地面站/驱动安装](first-setup/software-installation.md)
   * [加载固件](first-setup/loading-firmware.md)
     * [在线烧录固件](first-setup/loading-firmware/online-loading-firmware.md)
@@ -17,8 +18,8 @@
       * [飞行模拟](first-setup/connect/mission-planner/simulation.md)
       * [终端](first-setup/connect/mission-planner/terminal.md)
     * [CUAV Hfight](first-setup/connect/cuav-hfight.md)
- * [组装飞行器](first-setup/assermbly.md)
- * [硬件设置和校准](javascript:;)
+  * [组装飞行器](first-setup/assermbly.md)
+  * [硬件设置和校准](javascript:;)
     * [2.遥控器校准](calibration/rc-calibration.md)
     * [3.GPS罗盘校准](calibration/compass-calibration.md)
     * [4.加速计校准](calibration/accelerometer-calibration.md)
@@ -26,6 +27,7 @@
     * [6.PM模块设置](calibration/power-module.md)
     * [7.ESC电调校准](calibration/esc-calibration.md)
   * [机身安装指南](first-setup/configuration/common-airframes.md)
+
 * [第一次飞行](javascript:;)
   * [飞行模式介绍](flight-modes.md)
     * [MANUAL 自动模式](flight-modes/manual-mode.md)
@@ -119,65 +121,3 @@
 
 
 
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-    
