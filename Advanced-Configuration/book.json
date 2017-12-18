@@ -1,0 +1,28 @@
+{
+  "title": "修改成书名",
+  "description": "修改成书的描述",
+  "language": "zh-hans",
+  "plugins": [
+    "-sharing",
+    "-highlight",
+    "-livereload",
+    "prism",
+    "-theme-default",
+    "theme-cuav",
+    "cuav-chapters",
+    "-lunr",
+    "-search",
+    "search-pro"
+  ],
+  "pluginsConfig": {
+    "theme-cuav": {
+      "showGitBookLink": false,
+      "navbar": {
+        "navAjaxUrl": "/nav.json",
+        "brand": {
+             "url": "/"
+        }
+      }
+    }
+  }
+}
