@@ -41,7 +41,7 @@
     * [Guided指导模式](flight-modes/guided.md)
     * [Takeoff起飞模式](flight-modes/takeoff.md)
     * [Land降落模式](flight-modes/land.md)
-  * [Pre-arm报错信息分析](copter/pre-arm.md)
+  * [Pre-arm报错信息分析](pre-arm.md)
   * [解锁和上锁](arming-disarming.md)
   * [飞机启动及校准](aircraft starter/aircraft starter.md)
   * [失控保护](failsafe.md)
