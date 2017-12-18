@@ -114,6 +114,7 @@
   * [相机云台](Camera shutter and  gimbals/gimbals.md)
   * [CAN通信电调](optional-hardware/uavcan-escs.md)
   * [外置led](optional-hardware/external-led.md)
+  * [空速计](optional-hardware/airspeed.md)
   * [降落伞](optional-hardware/parachute.md)
   * [OSD](optional-hardware/osd.md)
 * [故障排除指南](troubleshooting.md)
