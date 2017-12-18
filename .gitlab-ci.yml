@@ -1,0 +1,15 @@
+build-book:
+  script: 
+  - gitbook install
+  
+  - rm -rf $WEBSITE_PATH/$CI_PROJECT_NAME
+  - gitbook build . $WEBSITE_PATH/$CI_PROJECT_NAME
+  
+  - cd $WEBSITE_PATH
+  - rm -f $CI_PROJECT_NAME/.gitignore $CI_PROJECT_NAME/.gitlab-ci.yml
+  
+  - mkdir -p $PACKAGE_PATH
+  - rm -f $PACKAGE_PATH/$CI_PROJECT_NAME.tgz
+  - tar zcf $PACKAGE_PATH/$CI_PROJECT_NAME.tgz $CI_PROJECT_NAME
+
+  stage: build
