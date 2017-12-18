@@ -25,7 +25,7 @@
     * [5.飞行模式设置](calibration/mode-setup.md)
     * [6.PM模块设置](calibration/power-module.md)
     * [7.ESC电调校准](calibration/esc-calibration.md)
-  * [机身安装指南](first-setup/airframe-guides.md)
+  * [机身安装指南](first-setup/configuration/common-airframes.md)
 * [第一次飞行](javascript:;)
   * [飞行模式介绍](flight-modes.md)
     * [MANUAL 自动模式](flight-modes/manual-mode.md)
