@@ -57,7 +57,6 @@ SRTM数据库的准确性在地球表面上各不相同。典型的精度是10�
 将TERRAIN_ENABLE设置为1，将TERRAIN_FOLLOW设置为1
 GPS锁定时，通过USB连接到车辆
 检查MissionPlanner中的FlightData-> Status页面并查找地形状态数据：
-check the FlightData->Status page in MissionPlanner and look for the terrain status data:
-../_images/MP-terrain.png
+
 
 
