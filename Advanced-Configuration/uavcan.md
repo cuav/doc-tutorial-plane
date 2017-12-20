@@ -4,7 +4,7 @@
 
 提示
 
-应该首先启用UAVCAN协议。 [请参考CAN总线设置](http://ardupilot.org/plane/docs/common-canbus-setup-advanced.html#common-canbus-setup-advanced)
+应该首先启用UAVCAN协议。[请参考CAN总线设置](http://ardupilot.org/plane/docs/common-canbus-setup-advanced.html#common-canbus-setup-advanced)
 
 ## 概述
 
