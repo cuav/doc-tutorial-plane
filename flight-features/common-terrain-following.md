@@ -1,0 +1,63 @@
+# 地形跟随
+
+从固定翼3.0.4起，自动驾驶板（如Pixhawk），可以使用自动地形跟随功能。 本页面将介绍地形跟踪的工作原理，如何启用它，以及它的局限性。
+
+如果使用直升机，请看
+
+[参见直升机特定地形](http://ardupilot.org/copter/docs/terrain-following.html#terrain-following)
+
+[![](http://ardupilot.org/plane/_images/Terrain_TitleImage.png "../\_images/Terrain\_TitleImage.png")](http://ardupilot.org/plane/_images/Terrain_TitleImage.png)
+
+## 工作原理
+
+通过在自动驾驶仪上的MicroSD卡上维护一个地形数据库来实现地形跟踪，该地形数据库为地理位置的网格提供海拔高度以米为单位的地形高度。在Pixhawk上，该数据库存储在microSD卡上的APM  TERRAIN目录中。
+
+数据库由自动驾驶仪通过MAVLink遥测链路从地面站请求地形数据自动填充。在飞行计划中，当自动驾驶仪通过USB连接时，或在通过无线电连接进行连接时，这可能发生。一旦地形数据从GCS发送到自动驾驶仪，它将存储在microSD卡上，即使GCS未连接，它也可以使用。这使得自动驾驶仪即使在无法与地面站通话的情况下，也可以使用地形数据执行RTL（返回发射）之后的地形。
+
+在飞行过程中，当飞机接近新的区域时，ArduPilot代码自动将所需的地形数据从microSD卡存入内存。如果使用默认的地形网格间隔，它将保持内存约7km乘8km的区域。
+
+除了飞机附近的任何地形数据外，ArduPilot还要求地面站提供任何装载的任务航点的地形数据，以及装载的任何航点。这确保了即使GCS变得不可用，在整个任务中也可以在microSD卡上使用地形数据。
+
+### 地形跟随飞行模式
+
+在以下飞行模式中可以使用飞机地形：
+
+RTL - 返航  
+LOITER - 悬停  
+cruise - 长途巡航  
+FBWB - 定高  
+GUIDED - “飞向”航点  
+AUTO - 自动  
+使用RTL，LOITER，CRUISE，FBWB和GUIDED模式中的地形由TERRAIN—FOLLOW参数控制。该参数默认为关闭，因此在这些模式下不会使用地形跟踪。将TERRAIN\_FOLLOW设置为1以在这些模式下启用地形跟踪。  
+在AUTO任务中使用地形跟随在航路点上，使用航路点的参考坐标系进行控制。正常（非地形跟踪）航路点具有“相对”参考系，并且相对于本地位置指定高度。地形下面的航点有一个“地形”参考框架，高度是相对于地形数据库中给出的地面高度。
+
+### 使用地形跟踪
+
+* 在地形可能变化很大的地区飞行ArduPilot时，地形跟踪非常有用。主要用途是：
+
+* 安全的RTL。当你在山区进入RTL时，能够爬过山而不是试图飞过山，这是非常有用的！ 航空摄影。在拍摄一系列航拍照片时，能够保持地面的恒定高度是非常有用的 FPV飞行。在巡航模式下飞行FPV时，保持高于地面的恒定高度是有用的，这样您可以花更多时间欣赏风景，避开山坡 地形数据的来源 地面站负责提供通过MAVLink发送给飞机的原始地形数据。目前只有MissionPlanner（版本1.3.9或更高版本）和MAVProxy支持地形跟踪支持所需的TERRAIN\_DATA和TERRAIN\_REQUEST消息。如果您正在使用不同的地面站，那么要加载地形数据，您需要使用两个支持地面站之一进行连接，以便ArduPilot将地形数据加载到您的板上。通常需要大约2分钟才能加载任务的所有地形数据。一旦它被加载它永久保存在microSD卡上。
+
+MissionPlanner和MAVProxy都支持地形数据的全球SRTM数据库。该数据库的全球网格间距为3弧秒（约100米），但在世界某些地方（美国约30米）的网格间距较小。通过扩展地面站代码，可以添加对其他地形数据库的支持，而无需更改ArduPilot代码。
+
+#### 地形间距
+
+ArduPilot地形编码有一个用户可设置的参数，称为TERRAIN\_SPACING，它控制网格间距，用于请求从飞机到地面站的地形数据。默认的TERRAIN\_SPACING是100米，但用户可以为专业应用程序设置不同的网格间距。
+
+请注意，保存在内存中的地形数据量与网格间距直接相关。如果将TERRAIN\_SPACING减少2倍，则保留在内存中的地形面积减少4倍。建议使用至少30米的TERRAIN\_SPACING，以防止飞机从侧面在飞行中的网格并没有可用的数据。
+
+如果地面站在飞机要求的分辨率下没有可用的地形数据，则地面站将根据需要内插以提供所要求的网格尺寸。
+地形精度
+SRTM数据库的准确性在地球表面上各不相同。典型的精度是10到20米左右，虽然有些地区更糟。这使得地形适合飞行在60米或更高海拔的飞机。不建议使用低空飞行的地形数据。
+
+##设置地形跟踪
+要设置您的固定翼飞机的地形下面遵循这些步骤
+
+确保你有平面3.0.4或更高版本加载
+确保你安装了最新的MissionPlanner（版本1.3.9或更高版本）
+将TERRAIN_ENABLE设置为1，将TERRAIN_FOLLOW设置为1
+GPS锁定时，通过USB连接到车辆
+检查MissionPlanner中的FlightData-> Status页面并查找地形状态数据：
+check the FlightData->Status page in MissionPlanner and look for the terrain status data:
+../_images/MP-terrain.png
+
+
