@@ -12,7 +12,7 @@
 
 这种差异可以对比ATT消息的Roll-in vs Roll 和Pitch-in 和Pitch以及NavYaw和Yaw，很容易看的出来。
 
-![](http://doc.cuav.net/PixHack/assets/DiagnosingWithLogs_RollInVsRoll.png)
+![](/assets/DiagnosingWithLogs_RollInVsRoll.png)
 
 在上图示例中，飞行器的实际横滚（ROLL）与期望横滚值（ROLL IN）刚开始的时候比较接近，但随后突然发散。飞控板希望控制ROLL IN为水平，实际ROLL值已经无法控制，这一般是一个硬件故障（ESC或者马达、螺旋桨失控），这与软件故障非常不同，如果是软件故障，比如参数不适合导致的严重震荡，ROLL IN和实际的ROLL应该会接近。
 
@@ -28,7 +28,7 @@
 
 振动看起来就好像草坪的**草**一样。要以一个持续的"草"波形去判断是否在合理范围内
 
-![](http://doc.cuav.net/PixHack/assets/DiagnosingWithLogs_Vibes.png)
+![](/assets/DiagnosingWithLogs_Vibes.png)
 
 ## 电子指南针（电子罗盘/compass）干扰： {#电子指南针（电子罗盘compass）干扰：}
 
@@ -45,10 +45,9 @@ GPS异常一般包括:丢星或者卫星数量突然减少
 ```
 NSats 卫星数量 越多越准确
 HDOP 水平（平面）位置精度因子 越小越准确
-
 ```
 
-![](http://doc.cuav.net/PixHack/assets/DisagnosingWithLogs_GPShdopAndNumSats_DF.png)
+![](/assets/DisagnosingWithLogs_GPShdopAndNumSats_DF.png)
 
 ## 电源故障 {#电源故障}
 
@@ -61,9 +60,10 @@ HDOP 水平（平面）位置精度因子 越小越准确
 * Dataflash日志的GPS信息的RelAlt\(结合加速度计+ 气压计高度估计\)
 
 * Tlog VFR\_HUD alt\(结合加速度计+气压高度 估计\)
+
 * Tlog的GLOBAL\_POSITION relative\_alt
 
-![](http://doc.cuav.net/PixHack/assets/power.jpg)
+![](/assets/power.jpg)
 
 电路板电压的变化也可能是电源问题的征兆。 主板电压在4.7~5.3v且跳动小于0.15v是正常的。如果超出这个范围，可能是与飞控共享电源的设备导致电源中的异常，从而导致电压拉低或其他奇怪的行为。 可以使用以下方式绘制电路板电压：
 
@@ -71,11 +71,11 @@ HDOP 水平（平面）位置精度因子 越小越准确
 
 * Tlog HWSTATUS的Vcc
 
-![](http://doc.cuav.net/PixHack/assets/power2.jpg)![](http://doc.cuav.net/PixHack/assets/power1.jpg)
+![](/assets/power2.jpg)![](/assets/power1.jpg)
 
 ## 其他意想不到的错误及故障保护 {#其他意想不到的错误及故障保护}
 
-![](http://doc.cuav.net/PixHack/assets/DiagnosingWithLogs_FilterForErrors.png)
+![](/assets/DiagnosingWithLogs_FilterForErrors.png)
 
 当飞行器出现了意想不到的错误，可能会触发对应的故障保护
 

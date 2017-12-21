@@ -10,13 +10,13 @@ Tlog是在APM / PX4和地面站之间发送的MAVLink遥测消息的记录，并
 
 除了“.tlog”文件之外，还创建了“.rlog”文件。 这些包含所有.tlog数据以及来自任务规划者的附加调试输出。 但不能被解析或播放，所以应该被忽略。
 
-## ![](http://doc.cuav.net/PixHack/assets/planner.jpg)设置遥测速率 {#设置遥测速率}
+## ![](/assets/planner.jpg)设置遥测速率 {#设置遥测速率}
 
 数据从APM / PX发送到地面站的期望速率可以通过mp地面站&gt;配置/调试&gt;planner界面下的遥测速率下拉列表进行控制。 因为通过遥测链路发送的所有数据也记录在tlog中，所以这也控制了保存到tlog的数据速率。
 
 需要注意的是，由于CPU资源的限制，尤其对于直升机，发送和保存的数据的实际速率可能会低于所请求的速率。
 
-![](http://doc.cuav.net/PixHack/assets/yap.jpg)
+![](/assets/yap.jpg)
 
 ##### 播放任务 {#播放任务}
 
@@ -33,13 +33,13 @@ Tlog是在APM / PX4和地面站之间发送的MAVLink遥测消息的记录，并
 
 * 按“play”
 
-![](http://doc.cuav.net/PixHack/assets/yao.jpg)
+![](/assets/yao.jpg)
 
 您还可以使用滑动进度条跳转到日志中的任意时间点，并使用预定义的“速度”按钮控制播放速度。
 
 当日志重播时，HUD界面将移动，并且地图上的飞行器位置将按照飞行中的时间进行更新。 通过“状态”选项卡可以看到单个数据值，甚至可以通过点击地图下方的“调试”复选框，将它们显示在图形中，然后双击数据图例，打开一个框，从中可以精确地选择哪个 数据字段如下图所示。 这将显示记录的数据随着飞行任务的进行而改变。
 
-![](http://doc.cuav.net/PixHack/assets/yao1.jpg)
+![](/assets/yao1.jpg)
 
 ## 创建飞行路径的3D图像 {#创建飞行路径的3d图像}
 
@@ -55,10 +55,9 @@ Tlog是在APM / PX4和地面站之间发送的MAVLink遥测消息的记录，并
 
 * 选择飞行tlog
 
-![](http://doc.cuav.net/PixHack/assets/yao2.jpg)一个.kmz和.kml文件将沿着原始的.tlog一边创建，这可以在google地球上打开，交互地查看3D飞行路径。 您可以打开Google Earth中的kmz文件来查看航班或路径。 只需双击该文件或拖动它并放入Google Earth。
+![](/assets/yao2.jpg)一个.kmz和.kml文件将沿着原始的.tlog一边创建，这可以在google地球上打开，交互地查看3D飞行路径。 您可以打开Google Earth中的kmz文件来查看航班或路径。 只需双击该文件或拖动它并放入Google Earth。![](/assets/yao3.jpg)
 
-* ![](http://doc.cuav.net/PixHack/assets/yao3.jpg)
-
+* 
 飞行期间使用的不同飞行模式将显示为不同的彩色轨迹。 您可以更改有关飞行路径显示方式的详细信息，包括其颜色以及路径是否延伸到地面：
 
 在左侧的“位置”窗格中查找日志文件的名称。 它应该出现在“临时位置”文件夹中。
@@ -89,7 +88,7 @@ Extract Params将导致在.log文件旁创建一个.param文件。 此文件是�
 
 * 选择飞行tlog
 
-![](http://doc.cuav.net/PixHack/assets/yao7.jpg)当出现“Graph This”屏幕时，使用左或右鼠标按钮单击要显示的项目旁边的复选框。这些项目分组为“RC\_CHANNELS”和“RAW\_IMU”等类别 ，可打开对应的分组找到想要的栏目。
+![](/assets/yao7.jpg)当出现“Graph This”屏幕时，使用左或右鼠标按钮单击要显示的项目旁边的复选框。这些项目分组为“RC\_CHANNELS”和“RAW\_IMU”等类别 ，可打开对应的分组找到想要的栏目。
 
 如果您使用鼠标左键，该项目的比例尺将显示在图表的左侧。 如果您使用鼠标右键，它将显示在右侧
 
