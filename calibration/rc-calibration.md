@@ -18,14 +18,13 @@ RC遥控器是一个用于直接控制飞行器的设备，校准是为了记录
 
 ```
 PS:听说很多直升机高手都是用 中国手，而真飞机飞行采用的是美国手 控制标准
-
 ```
 
-![](http://doc.cuav.net/PixHack/assets/model1.png)
+![](/assets/model1.png)
 
 MODEL1日本手 示意图
 
-![](http://doc.cuav.net/PixHack/assets/model2.png)
+![](/assets/model2.png)
 
 MODEL2美国手 示意图
 
@@ -47,7 +46,7 @@ MODEL2美国手 示意图
 
 4、使用USB或者数传连接飞控板。
 
-![](http://doc.cuav.net/PixHack/assets/radio%20calibration.png)
+
 
 ### 开始校准： {#开始校准：}
 
