@@ -4,17 +4,15 @@
 
 将飞控USB插入电脑，在设备管理器应该能看见一个PX4 FMU的端口（每个电脑的端口号都不会一样，你的可能是COM3或者其他，这个没有关系。只要在地面站选择正确的端口既可）
 
-![](http://doc.cuav.net/PixHack/assets/pc-usb.png)
+![](/assets/pc-usb.png)
 
-打开MP地面站-选择端口 波特率不需要改变。注意，**不要 点连接。不需要点 连接（否则无法烧录）**
-
-![](http://doc.cuav.net/PixHack/assets/mp-set-com.png)
+打开MP地面站-选择端口 波特率不需要改变。注意，**不要 点连接。不需要点 连接（否则无法烧录）**![](/assets/mp-set-com.png)
 
 选择**初始设置 - 安装固件**功能选项
 
 地面站会联网检测最新版本
 
-![](http://doc.cuav.net/PixHack/assets/install-firmware.png)
+![](/assets/install-firmware.png)
 
 获得到版本号后，在每个机型下面，具有一个版本号，比如**APM:Copter V3.4.5 QUAD.**
 
@@ -22,17 +20,15 @@
 
 就是获取失败，是无法烧录固件的，可以重新打开这个功能选项试试。
 
-**再不行，请尝试本地上传固件**
-
-![](http://doc.cuav.net/PixHack/assets/install-firmw2.png)
+**再不行，请尝试本地上传固件**![](/assets/install-firmw2.png)
 
 提示：拔下控制板，点OK后再重新插入
 
-![](http://doc.cuav.net/PixHack/assets/load-firmw3.png)
+![](/assets/load-firmw3.png)
 
 烧录完成后，等一段时间，大概20秒，飞控会有一段音乐，等待音乐播放完成后，就点OK。完成烧录！
 
-![](http://doc.cuav.net/PixHack/assets/loading%E2%80%94firmware4.png)
+![](/assets/loading—firmware4.png)
 
 ### 初步测试是否正常 {#初步测试是否正常}
 
