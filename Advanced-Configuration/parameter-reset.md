@@ -12,5 +12,5 @@
 
 如果您点击如下图标注\*\* 2 \*\*Tuning的位置，它将显示一个窗口“图形”，允许您选择要显示的传感器和数据输出。
 
-![](http://doc.cuav.net/PixHack/assets/chuan.jpg)![](http://doc.cuav.net/PixHack/assets/chuan2.jpg)点击图一tuning的位置可以打开Graph this的图像项目选择栏。
+![](/assets/chuan.jpg)![](/assets/chuan2.jpg)点击图一tuning的位置可以打开Graph this的图像项目选择栏。
 
