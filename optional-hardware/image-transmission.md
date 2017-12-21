@@ -4,7 +4,7 @@
 
 ## CUAV\_ VMR32 5.8G模拟图传接收机 {#cuav-vmr32--58g模拟图传接收机}
 
-![](http://doc.cuav.net/PixHack/assets/VMR.jpg)
+![](/assets/VMR.jpg)
 
 ## 概述： {#概述：}
 
@@ -50,7 +50,7 @@ VMR32是一款标准UVC免驱设备，支持大多数安卓设备、Windows电�
 
 #### 锐鹰 32频点 5.8g图传发射机 {#锐鹰-32频点-58g图传发射机}
 
-![](http://doc.cuav.net/PixHack/assets/RUI1.jpg)
+![](/assets/RUI1.jpg)
 
 锐鹰图传发射机有600mw、1w、2w等不同功率型号可选，其具有质量好、稳定性高、耐用性好等特点。
 
