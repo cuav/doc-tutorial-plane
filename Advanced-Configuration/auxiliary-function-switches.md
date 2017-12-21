@@ -6,7 +6,7 @@
 
 配置
 
-默认情况下,辅助开关禁用，可以在配置/调优试\|扩展 调参选项上设置开启或通过直接设置CH7\_OPT,CH8\_OPT,CH9\_OPT,CH10\_OPT,CH11\_OPT,或CH12\_OPT参数。![](http://doc.cuav.net/PixHack/assets/ch7.png)从图上可见辅助功能开关有以下功能选项：
+默认情况下,辅助开关禁用，可以在配置/调优试\|扩展 调参选项上设置开启或通过直接设置CH7\_OPT,CH8\_OPT,CH9\_OPT,CH10\_OPT,CH11\_OPT,或CH12\_OPT参数。![](/assets/ch7.png)从图上可见辅助功能开关有以下功能选项：
 
 1.不做操作
 
