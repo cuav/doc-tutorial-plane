@@ -19,12 +19,9 @@
 
 加载下载下来的\*\*.bin格式的飞行日志
 
-```
 注意地面站版本，版本不对或者太旧，可能会出错，请尝试更换新版本的地面站
 
-```
-
-### ![](http://doc.cuav.net/PixHack/assets/Capture3.png)
+### ![](/assets/Capture3.png)
 
 ## 手动分析闪存日志： {#手动分析闪存日志：}
 
@@ -43,7 +40,7 @@
 
 * 飞行数据信息，包括GPS，IMU
 
-![](http://doc.cuav.net/PixHack/assets/logs.jpg)
+![](/assets/logs2.jpg)
 
 通过点击选定的行，你可以看到图表和飞行数据，列标题会随之更新。下一列用图表表示的列，选中后点击“Graph this data”按钮。在这个例子中，以上ATT’S Roll-In 及 Roll数据会被图表化。滑动鼠标滚轮能够放大和缩小图表。同样你也可以选中图表中某一区域放大或缩小。通过右击鼠标，并选中“Set Scale to Default”同样可以缩小图表。点击链接Here’s
 
