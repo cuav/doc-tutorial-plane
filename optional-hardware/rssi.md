@@ -8,9 +8,9 @@ rssi是飞控接收到的信号强度参数，下面介绍一下如何设置rssi
 
 2.软件设置,打开mp地面站，连接上飞控》配置/调试界面》全部参数表》搜索rssi&gt;修改rssi_anapin为103》修改rssi\_pin\_high为3.3（可根据自己设备修改）》修改rssi\_type为1》写入参数_
 
-### ![](http://doc.cuav.net/PixHack/assets/RSSI.jpg)3.rssi信号强度在地面站hud显示 {#3rssi信号强度在地面站hud显示}
+### ![](/assets/RSSI.jpg)3.rssi信号强度在地面站hud显示 {#3rssi信号强度在地面站hud显示}
 
-### ![](http://doc.cuav.net/PixHack/assets/RSSI2.jpg)
+### ![](/assets/RSSI2.jpg)
 
 ### 来自UHF系统的嵌入式PWM（Pixhawk） {#来自uhf系统的嵌入式pwm（pixhawk）}
 
@@ -23,6 +23,4 @@ RSSI\_ANA\_PIN：103
 RSSI\_TYPE：2
 
 RSSI\_CHANNEL：您想要输入的通道。
-
-
 
