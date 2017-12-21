@@ -1,10 +1,9 @@
 ### 一.用otg线连接app（需手机或平板支持otg功能，且有些设备可能存在兼容问题）.
 
-![](http://doc.cuav.net/PixHack/assets/3.jpg)![](http://doc.cuav.net/PixHack/assets/4.jpg)
+![](/assets/3.jpg)![](/assets/4.jpg)
 
 ```
                        点击选择框                                                                                选择usb连接，点击连接
-
 ```
 
 ## 2.用蓝牙连接（该功能只适用蓝牙盒子 rtb box） {#2用蓝牙连接（该功能只适用蓝牙盒子-rtb-box）}
