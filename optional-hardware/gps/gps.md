@@ -21,8 +21,6 @@ cuav GPS有m8n、m7n、m6h、minigps等型号
 
 ### GPS状态显示 {#gps状态显示}
 
----
-
 ![](/assets/gps4.jpg)
 
 MP地面站一共有四处可以看GPS状态
@@ -31,11 +29,9 @@ MP地面站一共有四处可以看GPS状态
 
 2.gpsstatus：gps1状态代码。1：识别到gps但未定位;
 
-```
-gpshdop：定位精度,良好的定位精度应低于0.8;  
+gpshdop：定位精度,良好的定位精度应低于0.8;
 
 satcount：卫星数量
-```
 
 3.gpsstatus2:gps2状态代码
 
