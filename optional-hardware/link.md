@@ -14,7 +14,7 @@ CUAV目前推出了低中高端数传图传一体链路以满足普通玩家及�
 
 ### HACK\_LINK: {#hacklink}
 
-![](http://doc.cuav.net/PixHack/assets/hcaklink.jpg)
+![](/assets/hcaklink.jpg)
 
 #### 概述 {#概述}
 
