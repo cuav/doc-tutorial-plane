@@ -46,7 +46,7 @@ MODEL2美国手 示意图
 
 4、使用USB或者数传连接飞控板。
 
-
+![](/assets/radio calibration.png)
 
 ### 开始校准： {#开始校准：}
 
@@ -58,7 +58,7 @@ MODEL2美国手 示意图
 
 4. 电机校准完成，所有的通道值会自动显示出来。
 
-![](http://doc.cuav.net/PixHack/assets/radi-calib-results.png)
+![](/assets/radi-calib-results.png)
 
 ```
        注意：标准数值的1100-1900，特别是油门通道，不要过低或者过高，以免出现异常
