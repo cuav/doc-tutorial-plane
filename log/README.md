@@ -36,10 +36,9 @@ APM:COPTER固件内置了黑匣子功能，能记录非常详细的飞行数据�
 ```
 正常是有时间显示的，可能时区的问题，时间会偏差
 如果GPS未定位获取到时间，年月份 时间都是不准确的
-
 ```
 
-![](http://doc.cuav.net/PixHack/assets/mission_planner_download_logs.png)
+![](/assets/mission_planner_download_logs.png)
 
 #### 数传日志 Tlogs {#数传日志-tlogs}
 
