@@ -12,7 +12,7 @@
 
 降落伞版本可以从继电器或触发机制 PWM\(即伺服\),但因为[一个问题与继电器引脚被拉在启动高](https://github.com/ArduPilot/ardupilot/issues/1239),我们 建议使用PWM,特别是Pixhawk的任何辅助1到4 别针。
 
-![](http://doc.cuav.net/PixHack/assets/JIANG1.jpg)
+![](/assets/JIANG1.jpg)
 
 ## 通过mission planner计划 {#通过mission-planner计划}
 
@@ -30,9 +30,9 @@ CHUTE\_SERVO\_OFF应该是“静止”伺服位置。即 在释放降落伞之�
 
 如果使用AC3.4.6（或更低）设置RC9\_FUNCTION =“27”。 RC9\_引用Pixhawk的AUX OUT 1.要使用AUX OUT2而不是将RC10\_FUNCTION设置为27等。
 
-![](http://doc.cuav.net/PixHack/assets/JIANG2.jpg)![](http://doc.cuav.net/PixHack/assets/jiang3.jpg)设置Ch7从Mission Planner的扩展调整页面手动设置降落伞。
+![](/assets/JIANG2.jpg)![](/assets/jiang3.jpg)设置Ch7从Mission Planner的扩展调整页面手动设置降落伞。
 
-![](http://doc.cuav.net/PixHack/assets/JIANG4.jpg)降落伞何时会开启？
+![](/assets/JIANG4.jpg)降落伞何时会开启？
 
 当“碰撞检查”功能确定飞行器失去姿态控制并开始下落时，电机将停止，降落伞将自动展开。对于碰撞检查器触发降落伞的释放，需要保持2秒都是满足以下条件：
 
