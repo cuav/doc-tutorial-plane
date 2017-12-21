@@ -16,7 +16,7 @@ Download the[latest Mission Planner installer from here](http://firmware.ardupil
 
 **这个问题，我们建议你重新安装WIN10，兼容性更好。**
 
-![](http://doc.cuav.net/PixHack/assets/MPinstall.png)
+![](/assets/MPinstall.png)
 
 一直点next下一步，采用默认安装即可
 
@@ -24,11 +24,11 @@ Download the[latest Mission Planner installer from here](http://firmware.ardupil
 
 如果提示安装驱动，选择 任然安装此驱动
 
-![](http://doc.cuav.net/PixHack/assets/driver-install.png)
+![](/assets/driver-install.png)
 
-_Mission Planner_通常安装在**C:\ Program Files（x86）\ APM Planner**文件夹
+_Mission Planner_通常安装在**C: Program Files（x86） APM Planner**文件夹
 
-或**C:\ Program Files \ APM Planner**文件夹中。你的 日志文件文件夹 也会在这个安装目录。
+或**C: Program Files  APM Planner**文件夹中。你的 日志文件文件夹 也会在这个安装目录。
 
 #### 打开任务计划器 {#打开任务计划器}
 
