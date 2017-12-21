@@ -8,9 +8,7 @@ MP是APM/PIX标配地面站，经过多年的发展和优化，已经很稳定�
 
 从这里下载最新版本的地面站
 
-Download the[latest Mission Planner installer from here](http://firmware.ardupilot.org/Tools/MissionPlanner/MissionPlanner-latest.msi)
-
-### ![](http://doc.cuav.net/PixHack/assets/WIN_MP.png)
+Download the[latest Mission Planner installer from here](http://firmware.ardupilot.org/Tools/MissionPlanner/MissionPlanner-latest.msi)![](/assets/WIN_MP.png)
 
 ### 安卓版：CUAV Hfight {#安卓版：cuav-hfight}
 
@@ -20,7 +18,7 @@ CUAV Hfight是由CUAV二次开发的安卓地面站，主要优化数字视频�
 
 系统要求：Android 4.4以上
 
-![](http://doc.cuav.net/PixHack/assets/an_hf.png)
+![](/assets/an_hf.png)
 
 # QGroundControl {#qgroundcontrol}
 
@@ -28,7 +26,7 @@ CUAV Hfight是由CUAV二次开发的安卓地面站，主要优化数字视频�
 
 QGroundControl 是一个跨平台地面站软件，有 windows 版本 ，安卓版本，苹果版本等
 
-![](http://doc.cuav.net/PixHack/assets/qgc.png)
+![](/assets/qgc.png)
 
 windows下载地址：
 
