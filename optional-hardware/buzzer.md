@@ -20,7 +20,7 @@
 
 ### pixhawk安全开关 {#pixhawk安全开关}
 
-![](/assets/SAFE5.jpg)
+![](/assets/SAFE2.jpg)
 
 可以使用安全开关启用/禁用电机和伺服的输出。
 
@@ -40,7 +40,7 @@ BRD\_SAFETYENABLE = 0禁用开关
 
 BRD\_SAFETY\_MASK可用于设置使用安全开关启用/禁用哪些独立通道
 
-![](/assets/SAFE3.jpg)
+![](/assets/SAFE1.jpg)
 
 #### 使用安全开关强制I / O板固件更新 {#使用安全开关强制i--o板固件更新}
 
