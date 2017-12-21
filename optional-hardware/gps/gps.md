@@ -8,7 +8,7 @@ cuav GPS有m8n、m7n、m6h、minigps等型号
 
 ---
 
-![](http://doc.cuav.net/PixHack/assets/gps1.jpg)
+![](/assets/gps1.jpg)
 
 ### GPS使用 {#gps使用}
 
@@ -23,7 +23,7 @@ cuav GPS有m8n、m7n、m6h、minigps等型号
 
 ---
 
-![](http://doc.cuav.net/PixHack/assets/gps4.jpg)
+![](/assets/gps4.jpg)
 
 MP地面站一共有四处可以看GPS状态
 
@@ -35,7 +35,6 @@ MP地面站一共有四处可以看GPS状态
 gpshdop：定位精度,良好的定位精度应低于0.8;  
 
 satcount：卫星数量
-
 ```
 
 3.gpsstatus2:gps2状态代码
