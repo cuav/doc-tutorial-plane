@@ -18,7 +18,7 @@
 
 * 串行4/5在单个端口上包含两个串行连接。 Serial4通常用于第二个GPS。 Serial5是一个调试连接（debug）。遥测/串口设
 
-  ![](http://doc.cuav.net/PixHack/assets/wk1.jpg)
+  ![](/assets/wk1.jpg)
 
 ## 通过地面站设置 {#通过地面站设置}
 
@@ -30,7 +30,7 @@
 
 * [BRD\_SER1\_RTSCTS](http://ardupilot.org/copter/docs/parameters.html#brd-ser1-rtscts)和[BRD\_SER2\_RTSCTS](http://ardupilot.org/copter/docs/parameters.html#brd-ser2-rtscts)参数允许启用或禁用Telem1和Telem2流控制。
 
-### ![](http://doc.cuav.net/PixHack/assets/ser3.jpg)MAVLink1，MAVLink2和流速 {#mavlink1，mavlink2和流速}
+### ![](/assets/ser3.jpg)MAVLink1，MAVLink2和流速 {#mavlink1，mavlink2和流速}
 
 对于用于MAVLink通信的遥测端口，您可以通过将SERIALx\_PROTOCOL设置为“2”将SERIALx\_PROTOCOL设置为“1”或MAVLink2来选择使用MAVLink1。
 
@@ -40,5 +40,5 @@ MAVLink2支持“签署”数据包，从而提高安全性和灵活长度的消
 
 mp地面站的配置/调整\|计划程序屏幕的遥测率下拉列表可以方便地设置这些参数。
 
-![](http://doc.cuav.net/PixHack/assets/yap1.jpg)由于CPU带宽限制,实际发送的数据率可能低于要求。
+![](/assets/yap1.jpg)由于CPU带宽限制,实际发送的数据率可能低于要求。
 
