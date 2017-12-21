@@ -6,11 +6,7 @@
 
 配置
 
-根据固件版本，RCx\_FUNCTION或SERVOx\_FUNCTION可以设置为85个以上不同的值，以指定输出通道应该使用什么（注意：大多数地面站应显示整个可能的选项列表）。 在这种情况下，“x”是通道号，因此RC1\_FUNCTION或SERVO1\_FUNCTION指定使用Pixhawk背面的“MAIN OUT 1”引脚。 RC9\_FUNCTION或SERVO9\_FUNCTION指定使用“AUX OUT1”引脚。
-
-![](http://doc.cuav.net/PixHack/assets/ser1.png)
-
-要分配多电机直升机，可以使用这些功能值：
+根据固件版本，RCx\_FUNCTION或SERVOx\_FUNCTION可以设置为85个以上不同的值，以指定输出通道应该使用什么（注意：大多数地面站应显示整个可能的选项列表）。 在这种情况下，“x”是通道号，因此RC1\_FUNCTION或SERVO1\_FUNCTION指定使用Pixhawk背面的“MAIN OUT 1”引脚。 RC9\_FUNCTION或SERVO9\_FUNCTION指定使用“AUX OUT1”引脚。![](/assets/ser1.png)要分配多电机直升机，可以使用这些功能值：
 
 * 33：电机＃1
 
