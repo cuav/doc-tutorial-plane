@@ -6,7 +6,7 @@
 
 ### 连接pixahwk {#连接pixahwk}
 
-![](http://doc.cuav.net/PixHack/assets/CAN1.jpg)
+![](/assets/CAN1.jpg)
 
 一个电调（将uavcan电调df13 4pin接口连接到Pixhawk的CAN端口）； 每个后续的电调应使用4针UAVCAN电缆连接到以前的电缆。 最后的电调应该有一个CAN总线终端插入其中一个4针UAVCAN端口。
 
@@ -56,7 +56,7 @@ dc（停止电机）
 
 对每台电机都有一个node-id和索引1比前一个更高的电机重复2号电机（在一个quad的左后方），＃3，＃4等等（事实上，只要node-id是独特）。
 
-![](http://doc.cuav.net/PixHack/assets/CAN2.jpg)
+![](/assets/CAN2.jpg)
 
 本文引自：[http://ardupilot.org/copter/docs/common-uavcan-escs.html](http://ardupilot.org/copter/docs/common-uavcan-escs.html)
 
