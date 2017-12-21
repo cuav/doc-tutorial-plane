@@ -6,13 +6,13 @@
 
 以下部分介绍如何将传感器连接到飞行控制器。 安装空速传感器后，不要忘记校准！
 
-![](/assets/airspeed.jpg)
-
 ### Pixhawk数字空速引脚
 
 Pixhawk可以使用这种数字空速传感器。 将空速传感器连接到Pixhawk的I2C端口（或I2C转接板模块）。
+![](/assets/airspeed.jpg)
 
-![](/assets/aiespeed1.jpg)
+
+
 
 ### 启用数字空速传感器
 
@@ -20,11 +20,13 @@ Pixhawk可以使用这种数字空速传感器。 将空速传感器连接到Pix
 
 ![](/assets/airspeed2.jpg)
 
+
 ---
 
 # 使用模拟空速计
 
 ---
+
 
 PIXHACK/PIXAHWK支持模拟空速计
 
@@ -60,7 +62,8 @@ cuav 模拟空速计需要连接到pixhack /pixhawk adc 3.3引脚上。
 
 校准操作：连接上mission planner，打开飞行数据界面下的动作栏，点击下方动作选择框选择PREFLIGHT\_CALIBRATE点击执行动作（校准过程中切勿动空速计）。
 
-![](/assets/airspeed5.jpg)
+![](/assets/airspeed4.jpg)
+
 
 自动校准：为确保安全不建议使用。
 
