@@ -46,7 +46,7 @@
 
 有一个该特征的迷你的教程。你也可以通过先点击第一列并从下拉菜单中选中第一列来忽略第一列（飞行数据信息类型）。这尤其对于通过MP浏览不同飞行模式（详见MODE信息）十分有用。再次点击第一列“Cancel”按钮清除过滤。
 
-[![](http://ardupilot.org/copter/_images/MissionPlanner_CLI_openDataflashFilter.png)](http://ardupilot.org/copter/_images/MissionPlanner_CLI_openDataflashFilter.png)
+![](/assets/log3.jpg)
 
 ## 设置要记录的数据 {#设置要记录的数据}
 
