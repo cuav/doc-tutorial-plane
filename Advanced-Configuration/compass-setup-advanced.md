@@ -14,13 +14,13 @@ ArduPilot目前支持使用三个罗盘。 只有一个罗盘（使用COMPASS\_P
 
 主要自动驾驶仪板的标准配置如下表所示：
 
-![](http://doc.cuav.net/PixHack/assets/luo2.jpg)
+![](/assets/luo2.jpg)
 
 ## 设置配置 {#设置配置}
 
 AC3.4以上固件下支持板载磁校准，如果配合使用1.3.46以上版本的地面站地面站自动屏蔽现场校准界面，强制执行板载磁校准，根据有关资料及实测显示板载磁校准比现场校准更为可靠，下面介绍一下板载磁校准：
 
-![](http://doc.cuav.net/PixHack/assets/luo3.jpg)
+![](/assets/luo3.jpg)
 
 ## 快速配置 {#快速配置}
 
@@ -56,7 +56,7 @@ AHRS\_ORIENT参数的正确，可以确保您的内置罗盘的方位正确。
 
 自动获取偏角：根据GPS锁定后的查找表设置偏角。用户可以修改这个偏角;在去掉复选框中的勾（COMPASS\_AUTODEC = 0）后，可以在COMPASS\_DEC中手动输入偏角。
 
-![](http://doc.cuav.net/PixHack/assets/luo4.jpg)
+![](/assets/luo4.jpg)
 
 ## 指南针特定设置 {#指南针特定设置}
 
@@ -92,7 +92,7 @@ OFFSETS（COMPASS\_OFFSx）和MOT（COMPASS\_MOT）参数由实时校准和Compa
 
 按开始按钮
 
-![](http://doc.cuav.net/PixHack/assets/luo5.jpg)你应该听到你的哔哔两声
+![](/assets/luo5.jpg)你应该听到你的哔哔两声
 
 将油门缓慢升至50％〜75％（飞机将旋转！）5〜10秒
 
