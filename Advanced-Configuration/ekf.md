@@ -2,7 +2,7 @@
 
 ---
 
-![](http://doc.cuav.net/PixHack/assets/ekf.jpg)
+![](/assets/ekf.jpg)
 
 直升机和固定翼可以使用扩展卡尔曼滤波器（EKF）算法，基于速率陀螺仪，加速度计，罗盘，GPS，空速和大气压力测量来估计飞机位置，速度和角度方向。
 
