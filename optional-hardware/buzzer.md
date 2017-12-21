@@ -20,7 +20,7 @@
 
 ### pixhawk安全开关 {#pixhawk安全开关}
 
-![](http://doc.cuav.net/PixHack/assets/SAFE5.jpg)
+![](/assets/SAFE5.jpg)
 
 可以使用安全开关启用/禁用电机和伺服的输出。
 
@@ -40,7 +40,7 @@ BRD\_SAFETYENABLE = 0禁用开关
 
 BRD\_SAFETY\_MASK可用于设置使用安全开关启用/禁用哪些独立通道
 
-![](http://doc.cuav.net/PixHack/assets/SAFE3.jpg)
+![](/assets/SAFE3.jpg)
 
 #### 使用安全开关强制I / O板固件更新 {#使用安全开关强制i--o板固件更新}
 
@@ -52,7 +52,7 @@ BRD\_SAFETY\_MASK可用于设置使用安全开关启用/禁用哪些独立通�
 
 ### PIXAHCK安全开关与蜂鸣器 {#pixahck安全开关与蜂鸣器}
 
-![](http://doc.cuav.net/PixHack/assets/SAFE11.jpg)
+![](/assets/SAFE11.jpg)
 
 cuav安全开关是蜂鸣器与安全开关一体的模块，具有易安装、体积小的特点。其具有上述pixhawk安全开关和蜂鸣器的全部功能，设置方法也完全一致。
 
