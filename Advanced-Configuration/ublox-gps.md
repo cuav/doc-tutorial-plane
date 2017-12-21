@@ -14,13 +14,13 @@ mission planner和pixhawk可以通过执行以下操作建立u-center和GPS之�
 
 * 请参阅如何使用u-center上传配置文件。
 
-![](http://doc.cuav.net/PixHack/assets/u.jpg)![](http://doc.cuav.net/PixHack/assets/u2.jpg)
+![](/assets/u.jpg)![](/assets/u2.jpg)
 
 ## 连接方式2：使用ttl小板连接接gps与电脑 {#连接方式2：使用ttl小板连接接gps与电脑}
 
-![](http://doc.cuav.net/PixHack/assets/u4.jpg)自行做一条ttl小板与gps连接线（接5v,gnd，rx,tx四根线即可，注意两者的rx，tx需要交叉接，电源按照定为接即可）
+![](/assets/u4.jpg)自行做一条ttl小板与gps连接线（接5v,gnd，rx,tx四根线即可，注意两者的rx，tx需要交叉接，电源按照定为接即可）
 
-![](http://doc.cuav.net/PixHack/assets/u3.jpg)
+![](/assets/u3.jpg)
 
 设置好波特率及com即可连接（默认波特率为9600）
 
