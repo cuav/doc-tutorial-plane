@@ -18,6 +18,7 @@
       * [飞行模拟](first-setup/connect/mission-planner/simulation.md)
       * [终端](first-setup/connect/mission-planner/terminal.md)
     * [CUAV Hfight](first-setup/connect/cuav-hfight.md)
+  * [系统组成](systemcomposition.md)  
   * [组装飞行器](first-setup/assermbly.md)
   * [硬件设置和校准](javascript:;)
     * [2.遥控器校准](calibration/rc-calibration.md)
