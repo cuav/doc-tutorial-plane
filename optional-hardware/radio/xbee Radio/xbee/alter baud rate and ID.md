@@ -6,7 +6,7 @@
 
 1.打开xtcu软件，读取模块全部参数，查找到ID参数，并把其设置成想要的ID号，然后点击保存,稍等软件写入提示是ok后即写入成功（需确保两端id一致）
 
-![](http://doc.cuav.net/PixHack/assets/ID1.jpg)
+![](/assets/ID1.jpg)
 
 ---
 
@@ -14,5 +14,5 @@
 
 1.打开xtcu软件，读取模块全部参数，查找到BD参数，并把其设置成想要的波特率，然后点击保存,稍等软件写入提示是ok后即写入成功（需确保两端波特率一致）
 
-![](http://doc.cuav.net/PixHack/assets/bd1.jpg)
+![](/assets/bd1.jpg)
 
