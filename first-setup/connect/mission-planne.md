@@ -21,7 +21,7 @@ Misson Planner简称MP，是Windows 平台运行的一款APM/PIX的专属地面�
 
 ### 主要窗口功能介绍：（详细功能，请看下级专栏） {#主要窗口功能介绍：（详细功能，请看下级专栏）}
 
-![](http://doc.cuav.net/PixHack/assets/MP_-1.png)
+![](/assets/MP_-1.png)
 
 1. 软件版本号，连接飞控后，会同时显示飞控的软件版本号
 2. 主要功能选项区域
