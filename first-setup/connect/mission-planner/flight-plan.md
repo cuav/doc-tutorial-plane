@@ -10,5 +10,5 @@
 
 行业用户还可以做测绘规划等等
 
-![](http://doc.cuav.net/PixHack/assets/mp_flight_plan_screen.png)这里主要讲解的为MP地面站的任务规划功能，但是其他地面站的航点规划理念其实都是很类似的
+![](/assets/mp_flight_plan_screen.png)这里主要讲解的为MP地面站的任务规划功能，但是其他地面站的航点规划理念其实都是很类似的
 
