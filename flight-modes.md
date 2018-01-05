@@ -12,11 +12,11 @@
 遥控器和地面站都可以同时控制飞行模式，通常以最后一个命令为准
 ## 常用模式
 
-* [MANUAL](http://ardupilot.org/plane/docs/manual-mode.html#manual-mode)                                                         手动模式
+* [MANUAL 手动模式](/flight-modes/manual-mode.md)                                                       
 
-* [STABILIZE](http://ardupilot.org/plane/docs/stabilize-mode.html#stabilize-mode)                                                       增稳模式
+* [STABILIZE 增稳模式](/flight-modes/stabilize.md)
 
-* [FLY BY WIRE\_A \(FBWA\)](http://ardupilot.org/plane/docs/fbwa-mode.html#fbwa-mode)                                 线性A增稳
+* [FLY BY WIRE\_A \(FBWA\)](#flight-modes/fbwa.md)                                 线性A增稳
 
 * [FLY BY WIRE\_B \(FBWB](http://ardupilot.org/plane/docs/fbwb-mode.html#fbwb-mode)                                   线性B增稳
 
