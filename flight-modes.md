@@ -16,13 +16,13 @@
 
 * [STABILIZE 增稳模式](/flight-modes/stabilize.md)
 
-* [FLY BY WIRE\_A \(FBWA\)](#flight-modes/fbwa.md)                                 线性A增稳
+* [FLY BY WIRE\_A \(FBWA\)线性A增稳](/flight-modes/fbwa.md)                                 
 
-* [FLY BY WIRE\_B \(FBWB](http://ardupilot.org/plane/docs/fbwb-mode.html#fbwb-mode)                                   线性B增稳
+* [FLY BY WIRE\_B \(FBWB）线性B增稳](/flight-modes/auto.md)                                   
 
-* [AUTO](http://ardupilot.org/plane/docs/auto-mode.html#auto-mode)                                                                自动模式
+* [AUTO 自动模式](/flight-modes/auto.md)                                                                
 
-* [Return To Launch \(RTL\)](http://ardupilot.org/plane/docs/rtl-mode.html#rtl-mode)                                 返航模式
+* [Return To Launch \(RTL\) 返航模式](/flight-modes/rtl.md)                                
 
 * [LOITER](http://ardupilot.org/plane/docs/loiter-mode.html#loiter-mode)                                                              定点模式
 
