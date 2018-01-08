@@ -1,6 +1,6 @@
 {
-  "title": "修改成书名",
-  "description": "修改成书的描述",
+  "title": "plane",
+  "description": "固定翼教程",
   "language": "zh-hans",
   "plugins": [
     "-sharing",
