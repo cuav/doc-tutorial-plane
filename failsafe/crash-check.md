@@ -42,5 +42,5 @@
 
 找到：[FS\_CRASH\_CHECK](http://translate.googleusercontent.com/translate_c?depth=1&hl=zh-CN&ie=UTF8&prev=_t&rurl=translate.google.com.hk&sl=en&sp=nmt4&tl=zh-CN&u=http://ardupilot.org/copter/docs/parameters.html&usg=ALkJrhgVgwKJH6qq8u159P6nOmffozmCCA#fs-crash-check) 改为0禁用
 
-本文英文参考：http://ardupilot.org/copter/docs/crash\_check.html
+本文英文参考：[http://ardupilot.org/copter/docs/crash\_check.html](http://ardupilot.org/copter/docs/crash_check.html)
 
