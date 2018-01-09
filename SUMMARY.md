@@ -80,7 +80,7 @@
   * [闪存日志分析](log/dataflash.md)
   * [诊断硬件问题](log/diagnosing-problems-using-logs.md)
   * [遥测日志分析](log/tlogs.md)
-* [可选硬件](optional-hardware.md)
+* [可选硬件](javascript:;)
   * [数传遥测模块](optional-hardware/radio.md)
     * [数传连接CUAV  HFight](optional-hardware/radio/user guide/cuav-hfight.md)
     * [数传连接mp地面站](optional-hardware/radio/user guide/mission planner.md)

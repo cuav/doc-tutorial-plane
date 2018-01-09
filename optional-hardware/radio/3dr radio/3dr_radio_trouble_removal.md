@@ -6,19 +6,19 @@
 
 1.检查线材有没损坏或者不良，线序有无错误的；检查数传指示灯是否亮，天线是否插好，天线接口有无松动，飞控是否正常（用usb连接是否能连接上），注意连接数传时不能连接usb，否则不能连接。
 
-![](http://doc.cuav.net/PixHack/assets/3dr110.jpg)
+![](/assets/3dr110.jpg)
 
 2.检查两端参数是否一致，加载参数观察两端参数是否一致，不一致修改参数至一致，一致后先做恢复设置操作，再测试是否正常。
 
-![](http://doc.cuav.net/PixHack/assets/3DR111.jpg)
+![](/assets/3DR111.jpg)
 
 3.用x-tcu软件测试ttl端与usb端是否能正常通信，两端连接上电脑（两端不上天线相对10cmn以下放置于桌面），打开x-tcu软件（连续点击两次打开同时打开两个相同界面）分别选择对应的端口，注意波特率为57600
 
-![](http://doc.cuav.net/PixHack/assets/113.jpg)
+![](/assets/113.jpg)
 
-![](http://doc.cuav.net/PixHack/assets/3dr115.jpg)
+![](/assets/3dr115.jpg)
 
-![](http://doc.cuav.net/PixHack/assets/3dr116.jpg)点击range test,再点击star
+![](/assets/3dr116.jpg)点击range test,再点击star
 
 ![](http://doc.cuav.net/PixHack/assets/3DR117.jpg)  
 信号柱表示信号强度一直处于高位表示并且没有一直跳出错误提示表示数传正常，一直处于低位或者  
@@ -35,19 +35,14 @@
 
 五．相关软件驱动链接：
 
-```
-     3DR / XBEE / XTEND 数传驱动
+3DR / XBEE / XTEND 数传驱动
 
-          32位：                                                                                                                                                                                                 
+32位：                                                                                                                                                                                                 
+http://www.ftdichip.com/Drivers/CDM/CDM%20v2.12.04%20WHQL%20Certified.zip
+64位：
+http://www.ftdichip.com/Drivers/CDM/CDM%20v2.12.04%20WHQL%20Certified.zip
+xbee资料：http://pan.baidu.com/s/1sjsrpUX（里面有x-ctu软件）
 
-          http://www.ftdichip.com/Drivers/CDM/CDM%20v2.12.04%20WHQL%20Certified.zip
-
-          64位：
-
-          http://www.ftdichip.com/Drivers/CDM/CDM%20v2.12.04%20WHQL%20Certified.zip
-
-         xbee资料：http://pan.baidu.com/s/1sjsrpUX（里面有x-ctu软件）
-```
 
 
 
