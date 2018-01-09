@@ -30,5 +30,5 @@
 
 使用鼠标右键单击并点击“极限范围”上传多边形围栏到飞行器&gt;&gt;“上传”![](/assets/GEO3.jpg)
 
-本文英文参考：http://ardupilot.org/copter/docs/polygon\_fence.html
+本文英文参考：[http://ardupilot.org/copter/docs/polygon\_fence.html](http://ardupilot.org/copter/docs/polygon_fence.html)
 
