@@ -100,6 +100,7 @@
   * [电压电流计](javascript:;)
     * [PM电源模块](optional-hardware/power-modules/power-modules.md)
     * [HV\_PM高电压电源模块](optional-hardware/power-modules/hv_pm.md)
+    * [CPBD高压分电板](optional-hardware/power-modules/CPBD.md)
   * [GPS定位系统](javascript:;)
     * [ublox gps模块](optional-hardware/gps/gps.md)
     * [rtk 差分gps](optional-hardware/gps/rtk.md)
