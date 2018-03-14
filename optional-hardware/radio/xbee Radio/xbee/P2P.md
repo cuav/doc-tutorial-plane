@@ -26,9 +26,9 @@ b\) A模块的MY = B 模块的DT
 
 * A模块的DH=B模块的SH
 
-* A模块的DL=B模块的SL
+* A模块的DL=B模块的SH
 
-*  B模块的DL = A模块的SL
+* B模块的DL = A模块的SL
 
 * A模块的DL=B模块的SL
 
