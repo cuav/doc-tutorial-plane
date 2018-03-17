@@ -1,15 +1,36 @@
-build-book:
-  script: 
-  - gitbook install
-  
-  - rm -rf $WEBSITE_PATH/$CI_PROJECT_NAME
-  - gitbook build . $WEBSITE_PATH/$CI_PROJECT_NAME
-  
-  - cd $WEBSITE_PATH
-  - rm -f $CI_PROJECT_NAME/.gitignore $CI_PROJECT_NAME/.gitlab-ci.yml
-  
-  - mkdir -p $PACKAGE_PATH
-  - rm -f $PACKAGE_PATH/$CI_PROJECT_NAME.tgz
-  - tar zcf $PACKAGE_PATH/$CI_PROJECT_NAME.tgz $CI_PROJECT_NAME
+stages:
+  - build
 
+build-book:
   stage: build
+  tags: 
+    - gitbook
+  before_script: 
+    - gitbook install
+  script: 
+    - gitbook build
+    
+    # 删除编译的非网站内容
+    - /bin/rm -rf _book/.git*
+
+    # 删除网站文件
+    - mkdir -p $WEBSITE_PATH/$CI_PROJECT_NAME
+    - cd $WEBSITE_PATH/$CI_PROJECT_NAME
+    - rmf.sh
+    - /bin/rm -rf gitbook assets images en zh-hans $ASSETS
+
+    # 删除打包文件
+    - mkdir -p $PACKAGE_PATH
+    - /bin/rm -f $PACKAGE_PATH/$CI_PROJECT_NAME.tgz
+
+    # 打包
+    - cd -
+    - cd _book
+    - tar zcf $PACKAGE_PATH/$CI_PROJECT_NAME.tgz *
+
+    # 发布到预览
+    - /bin/mv * $WEBSITE_PATH/$CI_PROJECT_NAME/
+
+variables:
+  PACKAGE_PATH: .
+  ASSETS: ''
