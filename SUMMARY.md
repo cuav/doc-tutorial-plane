@@ -42,7 +42,7 @@
     * [Land降落模式](flight-modes/land.md)
   * [Pre-arm报错信息分析](pre-arm.md)
   * [解锁和上锁](arming-disarming.md)
-  * [飞机启动及校准](aircraft starter/aircraft starter.md)
+  * [飞机启动及校准](aircraft-starter/aircraft-starter.md)
   * [失控保护](failsafe.md)
     * [遥控器失控保护](failsafe/radio-failsafe.md)
     * [电池保护](failsafe/battery-failsafe.md)
