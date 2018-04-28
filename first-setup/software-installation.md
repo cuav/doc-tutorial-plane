@@ -22,7 +22,7 @@ Download the[latest Mission Planner installer from here](http://firmware.ardupil
 
 如果提示DirectX导致的安装错误，你可以需要下载DirectX对应版本，先安装了DirectX才能成功安装地面站
 
-如果提示安装驱动，选择 任然安装此驱动
+如果提示安装驱动，选择仍然安装此驱动
 
 ![](/assets/driver-install.png)
 
