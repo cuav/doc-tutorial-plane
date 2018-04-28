@@ -64,7 +64,7 @@
   * [辅助功能开关](Advanced-Configuration/auxiliary-function-switches.md)
   * [指南针设置（高级）](Advanced-Configuration/compass-setup-advanced.md)
   * [扩展卡尔曼滤波器（ekf\)](Advanced-Configuration/ekf.md)
-  * [地面效应补偿](Advanced-Configuration/Ground Effecf Compensation.md)
+  * [地面效应补偿](Advanced-Configuration/Ground-effecf Compensation.md)
   * [重置参数](Advanced-Configuration/current-limiting-and-voltage-scaling.md)
   * [RC输入通道映射](Advanced-Configuration/rc input Channel mapping.md)
   * [RC输出映射](Advanced-Configuration/rc output Channel mapping.md)
