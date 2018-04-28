@@ -47,7 +47,7 @@
     * [遥控器失控保护](failsafe/radio-failsafe.md)
     * [电池保护](failsafe/battery-failsafe.md)
     * [GCS地面站丢失保护](failsafe/gcs-failsafe.md)
-    * [EKF / DCM Check Failsafe](failsafe/ekf-dcm-check-failsafe.md)
+    * [EKF / DCM检查](failsafe/ekf-dcm-check-failsafe.md)
     * [简单电子围栏](failsafe/simple-geofence.md)
     * [多边形围栏](failsafe/polygon-fence.md)
     * [碰撞撞击保护](failsafe/crash-check.md)
