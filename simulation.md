@@ -30,7 +30,7 @@ APM SITL环境上运行了 Linux和Windows。 指令看[设置SITL Linux上](htt
 
 ## SITL架构
 
-注意在下面的图像端口号仅供参考，可能会有所不同。 例如，ArduPilot和图像上的模拟器之间的端口是5501/5502，但根据您的环境，它们可能会变成5504/5505或其他端口号。
+注意下面的图像端口号仅供参考，可能会有所不同。 例如，ArduPilot和图像上的模拟器之间的端口是5501/5502，但根据您的环境，它们可能会变成5504/5505或其他端口号。
 
 [![](http://ardupilot.org/dev/_images/ArdupilotSoftwareintheLoopSITL.jpg "../\_images/ArdupilotSoftwareintheLoopSITL.jpg")](http://ardupilot.org/dev/_images/ArdupilotSoftwareintheLoopSITL.jpg)
 
