@@ -16,8 +16,7 @@ build-book:
     # 删除网站文件
     - mkdir -p $WEBSITE_PATH/$CI_PROJECT_NAME
     - cd $WEBSITE_PATH/$CI_PROJECT_NAME
-    - rmf.sh
-    - /bin/rm -rf gitbook assets images en zh-hans $ASSETS
+    - /bin/rm -rf *
 
     # 删除打包文件
     - mkdir -p $PACKAGE_PATH
