@@ -70,7 +70,7 @@
   * [RC输出映射](advanced-configuration/rc-output-channel-mapping.md)
   * [传感器位置补偿](advanced-configuration/full-parameter-list.md)
   * [传感器测试](advanced-configuration/parameter-reset.md)
-  * [遥测或串口设置](advanced-configuration/telemetry-and-serial- settings.md)
+  * [遥测或串口设置](advanced-configuration/telemetry-and-serial-settings.md)
   * [UBlox gps配置](advanced-configuration/ublox-gps.md)
   * [电子控制的低高度限制](advanced-configuration/fly-by-wire-low-altitude-limit.md)
   * [can总线设置](advanced-configuration/can.md)
