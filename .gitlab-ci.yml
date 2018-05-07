@@ -2,7 +2,7 @@ stages:
 -build
 
 build-book:
-stage: build
+stage:build
 tags:
 - gitbook
 before_script:
