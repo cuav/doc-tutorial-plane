@@ -8,7 +8,7 @@
     * [烧录本地固件](first-setup/loading-firmware/web-down-firmware.md)
   * [地面站连接及使用](first-setup/connect.md)
     * [mission planner](first-setup/connect/mission-planne.md)
-      * [连接地面站](first-setup/connect/mission—planner/connect-mission-planner-autopilot.md)
+      * [连接地面站](first-setup/connect/mission-planner/connect-mission-planner-autopilot.md)
       * [飞行数据](first-setup/connect/mission-planner/flight-data.md)
       * [飞行计划](first-setup/connect/mission-planner/flight-plan.md)
       * [航点命令和事件](first-setup/connect/mission-planner/flight-plan/common-planning-a-mission-with-waypoints-and-events.md)
