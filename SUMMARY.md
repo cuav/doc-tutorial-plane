@@ -25,6 +25,7 @@
     * [7.ESC电调校准](calibration/esc-calibration.md)
   * [机身安装指南](first-setup/configuration/common-airframes.md)
   * [舵面检查](first-setup/rudder-inspection.md)
+  * [elevon planes](first-setup/elevon-planes.md)
 * [第一次飞行](javascript:;)
   * [飞行模式介绍](flight-modes.md)
     * [MANUAL 自动模式](flight-modes/manual-mode.md)
