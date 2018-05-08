@@ -66,7 +66,7 @@
   * [扩展卡尔曼滤波器（ekf\)](advanced-configuration/ekf.md)
   * [地面效应补偿](advanced-configuration/ground-effecf-compensation.md)
   * [重置参数](advanced-configuration/current-limiting-and-voltage-scaling.md)
-  * [RC输入通道映射](advanced-configuration/rc-input-channel mapping.md)
+  * [RC输入通道映射](advanced-configuration/rc-input-channel-mapping.md)
   * [RC输出映射](advanced-configuration/rc-output-channel-mapping.md)
   * [传感器位置补偿](advanced-configuration/full-parameter-list.md)
   * [传感器测试](advanced-configuration/parameter-reset.md)
