@@ -28,7 +28,7 @@
   * [elevon planes](first-setup/elevon-planes.md)
 * [第一次飞行](javascript:;)
   * [飞行模式介绍](flight-modes.md)
-    * [MANUAL 自动模式](flight-modes/manual-mode.md)
+    * [MANUAL 手动模式](flight-modes/manual-mode.md)
     * [STABILIZE简单增稳模式](flight-modes/stabilize.md)
     * [FBWA线性A增稳模式](flight-modes/fbwa.md)
     * [FBWB线性B增稳模式](flight-modes/fbwb.md)
