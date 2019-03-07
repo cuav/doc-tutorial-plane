@@ -1,0 +1,2595 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>闪存日志分析 · plane</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-richquotes/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-cuav-doc-chapters/cuav-doc-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-cuav-doc-navbar/cuav-navbar-styles.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-cuav-fontsettings/cuav-fontsettings.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+
+<meta name="renderer" content="webkit"/>
+
+
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="diagnosing-problems-using-logs.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+
+
+    </head>
+    <body>
+         
+<div class="cuav-navbar">
+  <div class="cuav-navbar-logo">
+    <a href="//doc.cuav.net">
+      <img src="../gitbook/gitbook-plugin-cuav-doc-navbar/images/cuav-logo.png" alt="CUAV logo" />
+    </a>
+  </div>
+</div>
+
+
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    固定翼飞行器教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <a target="_blank" href="javascript:;">
+            
+                    
+                    第一次设置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../first-setup/software-installation.html">
+            
+                <a href="../first-setup/software-installation.html">
+            
+                    
+                    地面站/驱动安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../first-setup/loading-firmware.html">
+            
+                <a href="../first-setup/loading-firmware.html">
+            
+                    
+                    加载固件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../first-setup/loading-firmware/online-loading-firmware.html">
+            
+                <a href="../first-setup/loading-firmware/online-loading-firmware.html">
+            
+                    
+                    在线烧录固件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../first-setup/loading-firmware/web-down-firmware.html">
+            
+                <a href="../first-setup/loading-firmware/web-down-firmware.html">
+            
+                    
+                    烧录本地固件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../first-setup/connect.html">
+            
+                <a href="../first-setup/connect.html">
+            
+                    
+                    地面站连接及使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../first-setup/connect/mission-planne.html">
+            
+                <a href="../first-setup/connect/mission-planne.html">
+            
+                    
+                    mission planner
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1.1" data-path="../first-setup/connect/mission-planner/connect-mission-planner-autopilot.html">
+            
+                <a href="../first-setup/connect/mission-planner/connect-mission-planner-autopilot.html">
+            
+                    
+                    连接地面站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.1.2" data-path="../first-setup/connect/mission-planner/flight-data.html">
+            
+                <a href="../first-setup/connect/mission-planner/flight-data.html">
+            
+                    
+                    飞行数据
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.1.3" data-path="../first-setup/connect/mission-planner/flight-plan.html">
+            
+                <a href="../first-setup/connect/mission-planner/flight-plan.html">
+            
+                    
+                    飞行计划
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.1.4" data-path="../first-setup/connect/mission-planner/flight-plan/common-planning-a-mission-with-waypoints-and-events.html">
+            
+                <a href="../first-setup/connect/mission-planner/flight-plan/common-planning-a-mission-with-waypoints-and-events.html">
+            
+                    
+                    航点命令和事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.1.5" data-path="../first-setup/connect/mission-planner/configtuning.html">
+            
+                <a href="../first-setup/connect/mission-planner/configtuning.html">
+            
+                    
+                    配置/调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../first-setup/connect/cuav-hfight.html">
+            
+                <a href="../first-setup/connect/cuav-hfight.html">
+            
+                    
+                    CUAV Hfight
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../systemcomposition.html">
+            
+                <a href="../systemcomposition.html">
+            
+                    
+                    系统组成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../first-setup/assermbly.html">
+            
+                <a href="../first-setup/assermbly.html">
+            
+                    
+                    组装飞行器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" >
+            
+                <a target="_blank" href="javascript:;">
+            
+                    
+                    硬件设置和校准
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.6.1" data-path="../calibration/rc-calibration.html">
+            
+                <a href="../calibration/rc-calibration.html">
+            
+                    
+                    2.遥控器校准
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.2" data-path="../calibration/compass-calibration.html">
+            
+                <a href="../calibration/compass-calibration.html">
+            
+                    
+                    3.GPS罗盘校准
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.3" data-path="../calibration/accelerometer-calibration.html">
+            
+                <a href="../calibration/accelerometer-calibration.html">
+            
+                    
+                    4.加速计校准
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.4" data-path="../calibration/mode-setup.html">
+            
+                <a href="../calibration/mode-setup.html">
+            
+                    
+                    5.飞行模式设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.5" data-path="../calibration/power-module.html">
+            
+                <a href="../calibration/power-module.html">
+            
+                    
+                    6.PM模块设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.6" data-path="../calibration/esc-calibration.html">
+            
+                <a href="../calibration/esc-calibration.html">
+            
+                    
+                    7.ESC电调校准
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../first-setup/configuration/common-airframes.html">
+            
+                <a href="../first-setup/configuration/common-airframes.html">
+            
+                    
+                    机身安装指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../first-setup/rudder-inspection.html">
+            
+                <a href="../first-setup/rudder-inspection.html">
+            
+                    
+                    舵面检查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../first-setup/elevon-planes.html">
+            
+                <a href="../first-setup/elevon-planes.html">
+            
+                    
+                    elevon planes
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <a target="_blank" href="javascript:;">
+            
+                    
+                    第一次飞行
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../flight-modes.html">
+            
+                <a href="../flight-modes.html">
+            
+                    
+                    飞行模式介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1.1" data-path="../flight-modes/manual-mode.html">
+            
+                <a href="../flight-modes/manual-mode.html">
+            
+                    
+                    MANUAL 手动模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.2" data-path="../flight-modes/stabilize.html">
+            
+                <a href="../flight-modes/stabilize.html">
+            
+                    
+                    STABILIZE简单增稳模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.3" data-path="../flight-modes/fbwa.html">
+            
+                <a href="../flight-modes/fbwa.html">
+            
+                    
+                    FBWA线性A增稳模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.4" data-path="../flight-modes/fbwb.html">
+            
+                <a href="../flight-modes/fbwb.html">
+            
+                    
+                    FBWB线性B增稳模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.5" data-path="../flight-modes/auto.html">
+            
+                <a href="../flight-modes/auto.html">
+            
+                    
+                    AUTO自动模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.6" data-path="../flight-modes/rtl.html">
+            
+                <a href="../flight-modes/rtl.html">
+            
+                    
+                    RTL返航模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.7" data-path="../flight-modes/loiter.html">
+            
+                <a href="../flight-modes/loiter.html">
+            
+                    
+                    LOITER定点模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.8" data-path="../flight-modes/acro.html">
+            
+                <a href="../flight-modes/acro.html">
+            
+                    
+                    Acro特技模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.9" data-path="../flight-modes/cruise.html">
+            
+                <a href="../flight-modes/cruise.html">
+            
+                    
+                    Cruise巡航模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.10" data-path="../flight-modes/circle.html">
+            
+                <a href="../flight-modes/circle.html">
+            
+                    
+                    Circle绕圆模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.11" data-path="../flight-modes/guided.html">
+            
+                <a href="../flight-modes/guided.html">
+            
+                    
+                    Guided指导模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.12" data-path="../flight-modes/takeoff.html">
+            
+                <a href="../flight-modes/takeoff.html">
+            
+                    
+                    Takeoff起飞模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.1.13" data-path="../flight-modes/land.html">
+            
+                <a href="../flight-modes/land.html">
+            
+                    
+                    Land降落模式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../pre-arm.html">
+            
+                <a href="../pre-arm.html">
+            
+                    
+                    Pre-arm报错信息分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../arming-disarming.html">
+            
+                <a href="../arming-disarming.html">
+            
+                    
+                    解锁和上锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../aircraft-starter/aircraft-starter.html">
+            
+                <a href="../aircraft-starter/aircraft-starter.html">
+            
+                    
+                    飞机启动及校准
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../failsafe.html">
+            
+                <a href="../failsafe.html">
+            
+                    
+                    失控保护
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.5.1" data-path="../failsafe/radio-failsafe.html">
+            
+                <a href="../failsafe/radio-failsafe.html">
+            
+                    
+                    遥控器失控保护
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.2" data-path="../failsafe/battery-failsafe.html">
+            
+                <a href="../failsafe/battery-failsafe.html">
+            
+                    
+                    电池保护
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.3" data-path="../failsafe/gcs-failsafe.html">
+            
+                <a href="../failsafe/gcs-failsafe.html">
+            
+                    
+                    GCS地面站丢失保护
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.4" data-path="../failsafe/ekf-dcm-check-failsafe.html">
+            
+                <a href="../failsafe/ekf-dcm-check-failsafe.html">
+            
+                    
+                    EKF / DCM检查
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.5" data-path="../failsafe/simple-geofence.html">
+            
+                <a href="../failsafe/simple-geofence.html">
+            
+                    
+                    简单电子围栏
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.6" data-path="../failsafe/polygon-fence.html">
+            
+                <a href="../failsafe/polygon-fence.html">
+            
+                    
+                    多边形围栏
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5.7" data-path="../failsafe/crash-check.html">
+            
+                <a href="../failsafe/crash-check.html">
+            
+                    
+                    碰撞撞击保护
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../flight-features.html">
+            
+                <a href="../flight-features.html">
+            
+                    
+                    飞行特性
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../flight-features/automatic-takeoff.html">
+            
+                <a href="../flight-features/automatic-takeoff.html">
+            
+                    
+                    自动起飞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../flight-features/automatic-landing.html">
+            
+                <a href="../flight-features/automatic-landing.html">
+            
+                    
+                    自动降落
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../flight-features/inverted-flight.html">
+            
+                <a href="../flight-features/inverted-flight.html">
+            
+                    
+                    反向飞行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../flight-features/stall-prevention.html">
+            
+                <a href="../flight-features/stall-prevention.html">
+            
+                    
+                    预防失速
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../flight-features/geofencing.html">
+            
+                <a href="../flight-features/geofencing.html">
+            
+                    
+                    地理围栏
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../flight-features/common-terrain-following.html">
+            
+                <a href="../flight-features/common-terrain-following.html">
+            
+                    
+                    地形跟随
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../flight-features/channel-output-functions.html">
+            
+                <a href="../flight-features/channel-output-functions.html">
+            
+                    
+                    输出通道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../flight-features/soaring.html">
+            
+                <a href="../flight-features/soaring.html">
+            
+                    
+                    飙升
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <a target="_blank" href="javascript:;">
+            
+                    
+                    高级配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../advanced-configuration/auxiliary-function-switches.html">
+            
+                <a href="../advanced-configuration/auxiliary-function-switches.html">
+            
+                    
+                    辅助功能开关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../advanced-configuration/compass-setup-advanced.html">
+            
+                <a href="../advanced-configuration/compass-setup-advanced.html">
+            
+                    
+                    指南针设置（高级)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../advanced-configuration/ekf.html">
+            
+                <a href="../advanced-configuration/ekf.html">
+            
+                    
+                    扩展卡尔曼滤波器（ekf)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../advanced-configuration/ground-effecf-compensation.html">
+            
+                <a href="../advanced-configuration/ground-effecf-compensation.html">
+            
+                    
+                    地面效应补偿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../advanced-configuration/current-limiting-and-voltage-scaling.html">
+            
+                <a href="../advanced-configuration/current-limiting-and-voltage-scaling.html">
+            
+                    
+                    重置参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../advanced-configuration/rc-input-channel-mapping.html">
+            
+                <a href="../advanced-configuration/rc-input-channel-mapping.html">
+            
+                    
+                    RC输入通道映射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../advanced-configuration/rc-output-channel-mapping.html">
+            
+                <a href="../advanced-configuration/rc-output-channel-mapping.html">
+            
+                    
+                    RC输出映射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../advanced-configuration/full-parameter-list.html">
+            
+                <a href="../advanced-configuration/full-parameter-list.html">
+            
+                    
+                    传感器位置补偿
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.9" data-path="../advanced-configuration/parameter-reset.html">
+            
+                <a href="../advanced-configuration/parameter-reset.html">
+            
+                    
+                    传感器测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.10" data-path="../advanced-configuration/telemetry-and-serial-settings.html">
+            
+                <a href="../advanced-configuration/telemetry-and-serial-settings.html">
+            
+                    
+                    遥测或串口设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.11" data-path="../advanced-configuration/ublox-gps.html">
+            
+                <a href="../advanced-configuration/ublox-gps.html">
+            
+                    
+                    UBlox gps配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.12" data-path="../advanced-configuration/fly-by-wire-low-altitude-limit.html">
+            
+                <a href="../advanced-configuration/fly-by-wire-low-altitude-limit.html">
+            
+                    
+                    电子控制的低高度限制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.13" data-path="../advanced-configuration/can.html">
+            
+                <a href="../advanced-configuration/can.html">
+            
+                    
+                    can总线设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.14" data-path="../advanced-configuration/uavcan.html">
+            
+                <a href="../advanced-configuration/uavcan.html">
+            
+                    
+                    uavcan设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../first-setup/connect/mission-planner/flight-plan.html">
+            
+                <a href="../first-setup/connect/mission-planner/flight-plan.html">
+            
+                    
+                    任务规划
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../first-setup/connect/mission-planner/flight-plan/common-planning-a-mission-with-waypoints-and-events.html">
+            
+                <a href="../first-setup/connect/mission-planner/flight-plan/common-planning-a-mission-with-waypoints-and-events.html">
+            
+                    
+                    航点命令和事件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    日志概述和分析
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.7.1" data-path="dataflash.html">
+            
+                <a href="dataflash.html">
+            
+                    
+                    闪存日志分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="diagnosing-problems-using-logs.html">
+            
+                <a href="diagnosing-problems-using-logs.html">
+            
+                    
+                    诊断硬件问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="tlogs.html">
+            
+                <a href="tlogs.html">
+            
+                    
+                    遥测日志分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <a target="_blank" href="javascript:;">
+            
+                    
+                    可选硬件
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../optional-hardware/radio.html">
+            
+                <a href="../optional-hardware/radio.html">
+            
+                    
+                    数传遥测模块
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.1" data-path="../optional-hardware/radio/user-guide/cuav-hfight.html">
+            
+                <a href="../optional-hardware/radio/user-guide/cuav-hfight.html">
+            
+                    
+                    数传连接CUAV  HFight
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.2" data-path="../optional-hardware/radio/user-guide/mission- planner.md">
+            
+                <span>
+            
+                    
+                    数传连接mp地面站
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.3" data-path="../optional-hardware/radio/usb-xbee.html">
+            
+                <a href="../optional-hardware/radio/usb-xbee.html">
+            
+                    
+                    xbee/xtend/sx数传
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.3.1" data-path="../optional-hardware/radio/xbee-radio/xbeextend debug.md">
+            
+                <span>
+            
+                    
+                    xbee/xtend调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.3.2" data-path="../optional-hardware/radio/xbee-radio/xbee/p2p.html">
+            
+                <a href="../optional-hardware/radio/xbee-radio/xbee/p2p.html">
+            
+                    
+                    点对点通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.3.3" data-path="../optional-hardware/radio/xbee-radio/xbee/multi- drop.md">
+            
+                <span>
+            
+                    
+                    多点通信
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.3.4" data-path="../optional-hardware/radio/xbee-radio/xbee/alter- baud-rate-and-id.md">
+            
+                <span>
+            
+                    
+                    修改波特率及ID
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.3.5" data-path="../optional-hardware/radio/xbee- radio/xbee/restore-default.md">
+            
+                <span>
+            
+                    
+                    xbee模块强制恢复固件
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.4" >
+            
+                <a target="_blank" href="javascript:;">
+            
+                    
+                    3DR数传
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.4.1" data-path="../optional-hardware/radio/3dr-radio/3dr-radio-trouble-removal.html">
+            
+                <a href="../optional-hardware/radio/3dr-radio/3dr-radio-trouble-removal.html">
+            
+                    
+                    3dr数传故障排除教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.4.2" data-path="../optional-hardware/radio/3dr-radio/3dr-debug.html">
+            
+                <a href="../optional-hardware/radio/3dr-radio/3dr-debug.html">
+            
+                    
+                    3DR数传调试教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.4.3" data-path="../optional-hardware/radio/3dr-radio/3dr-radio.html">
+            
+                <a href="../optional-hardware/radio/3dr-radio/3dr-radio.html">
+            
+                    
+                    3dr数传使用教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../optional-hardware/link.html">
+            
+                <a href="../optional-hardware/link.html">
+            
+                    
+                    数传图传一体链路
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../optional-hardware/image-transmission.html">
+            
+                <a href="../optional-hardware/image-transmission.html">
+            
+                    
+                    模拟图传
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" >
+            
+                <a target="_blank" href="javascript:;">
+            
+                    
+                    电压电流计
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.4.1" data-path="../optional-hardware/power-modules/power-modules.html">
+            
+                <a href="../optional-hardware/power-modules/power-modules.html">
+            
+                    
+                    PM电源模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4.2" data-path="../optional-hardware/power-modules/hv-pm.html">
+            
+                <a href="../optional-hardware/power-modules/hv-pm.html">
+            
+                    
+                    HV_PM高电压电源模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4.3" data-path="../optional-hardware/power-modules/cpbd.html">
+            
+                <a href="../optional-hardware/power-modules/cpbd.html">
+            
+                    
+                    CPBD高压分电板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" >
+            
+                <a target="_blank" href="javascript:;">
+            
+                    
+                    GPS定位系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.5.1" data-path="../optional-hardware/gps/gps.html">
+            
+                <a href="../optional-hardware/gps/gps.html">
+            
+                    
+                    ublox gps模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5.2" data-path="../optional-hardware/gps/rtk.html">
+            
+                <a href="../optional-hardware/gps/rtk.html">
+            
+                    
+                    rtk 差分gps
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../optional-hardware/buzzer.html">
+            
+                <a href="../optional-hardware/buzzer.html">
+            
+                    
+                    安全开关和蜂鸣器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../optional-hardware/ppm-encoder.html">
+            
+                <a href="../optional-hardware/ppm-encoder.html">
+            
+                    
+                    PPM编码器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../optional-hardware/relay-switch.html">
+            
+                <a href="../optional-hardware/relay-switch.html">
+            
+                    
+                    继电器开关
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../optional-hardware/rssi.html">
+            
+                <a href="../optional-hardware/rssi.html">
+            
+                    
+                    RSSI信号强度指示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10" >
+            
+                <a target="_blank" href="javascript:;">
+            
+                    
+                    相机云台
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.10.1" data-path="../Camera-shutter-and-gimbals/gimbals.md">
+            
+                <span>
+            
+                    
+                    相机云台
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.10.2" data-path="../Camera-shutter-and-gimbals/shutter.md">
+            
+                <span>
+            
+                    
+                    快门触发
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.11" data-path="../optional-hardware/uavcan-escs.html">
+            
+                <a href="../optional-hardware/uavcan-escs.html">
+            
+                    
+                    CAN通信电调
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.12" data-path="../optional-hardware/external-led.html">
+            
+                <a href="../optional-hardware/external-led.html">
+            
+                    
+                    外置led
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.13" data-path="../optional-hardware/airspeed.html">
+            
+                <a href="../optional-hardware/airspeed.html">
+            
+                    
+                    空速计
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.14" data-path="../optional-hardware/parachute.html">
+            
+                <a href="../optional-hardware/parachute.html">
+            
+                    
+                    降落伞
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.15" data-path="../optional-hardware/osd.html">
+            
+                <a href="../optional-hardware/osd.html">
+            
+                    
+                    OSD
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../troubleshooting.html">
+            
+                <a href="../troubleshooting.html">
+            
+                    
+                    故障排除指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../simulation.html">
+            
+                <a href="../simulation.html">
+            
+                    
+                    SITL模拟器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >闪存日志分析</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x95EA;&#x5B58;&#x65E5;&#x5FD7;&#x5206;&#x6790;"><a name="&#x95EA;&#x5B58;&#x65E5;&#x5FD7;&#x5206;&#x6790;" class="plugin-anchor" href="#&#x95EA;&#x5B58;&#x65E5;&#x5FD7;&#x5206;&#x6790;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x95EA;&#x5B58;&#x65E5;&#x5FD7;&#x5206;&#x6790; </h1>
+<hr>
+<h3 id="&#x6982;&#x8FF0;"><a name="&#x6982;&#x8FF0;" class="plugin-anchor" href="#&#x6982;&#x8FF0;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6982;&#x8FF0; </h3>
+<p>&#x95EA;&#x5B58;&#x65E5;&#x5FD7;&#x6709;2&#x79CD;&#x5206;&#x6790;&#x65B9;&#x5F0F;&#xFF1A;</p>
+<ol>
+<li><strong>&#x81EA;&#x52A8;&#x5206;&#x6790;</strong>
+&#xFF1A;&#x4F7F;&#x7528;&#x5730;&#x9762;&#x7AD9;&#x7684;&#x81EA;&#x52A8;&#x5206;&#x6790;&#x529F;&#x80FD;&#xFF0C;&#x5206;&#x6790;&#x98DE;&#x884C;&#x65E5;&#x5FD7;&#xFF0C;&#x76F4;&#x63A5;&#x83B7;&#x5F97;&#x6BD4;&#x8F83;&#x91CD;&#x8981;&#x7684;&#x95EE;&#x9898;&#x7ED3;&#x679C;&#x62A5;&#x544A;&#xFF0C;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#x660E;&#x4E86;</li>
+<li><strong>&#x624B;&#x52A8;&#x5206;&#x6790;</strong>
+&#xFF1A;&#x4F7F;&#x7528;&#x5730;&#x9762;&#x7AD9;&#x7684;&#x56DE;&#x987E;&#x65E5;&#x5FD7; &#x529F;&#x80FD;&#xFF0C;&#x8FDB;&#x884C;&#x624B;&#x52A8;&#x5206;&#x6790;&#xFF0C;&#x9700;&#x8981;&#x6709;&#x4E00;&#x5B9A;&#x7684;&#x57FA;&#x7840;&#x548C;&#x7ECF;&#x9A8C;</li>
+</ol>
+<h3 id="&#x81EA;&#x52A8;&#x5206;&#x6790;&#xFF1A;"><a name="&#x81EA;&#x52A8;&#x5206;&#x6790;&#xFF1A;" class="plugin-anchor" href="#&#x81EA;&#x52A8;&#x5206;&#x6790;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x81EA;&#x52A8;&#x5206;&#x6790;&#xFF1A; </h3>
+<hr>
+<p>&#x6253;&#x5F00;MP&#x5730;&#x9762;&#x7AD9;&gt;&gt;&#x98DE;&#x884C;&#x6570;&#x636E;&gt;&gt;&gt;&#x81EA;&#x52A8;&#x5206;&#x6790;</p>
+<p>&#x52A0;&#x8F7D;&#x4E0B;&#x8F7D;&#x4E0B;&#x6765;&#x7684;**.bin&#x683C;&#x5F0F;&#x7684;&#x98DE;&#x884C;&#x65E5;&#x5FD7;</p>
+<p>&#x6CE8;&#x610F;&#x5730;&#x9762;&#x7AD9;&#x7248;&#x672C;&#xFF0C;&#x7248;&#x672C;&#x4E0D;&#x5BF9;&#x6216;&#x8005;&#x592A;&#x65E7;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x51FA;&#x9519;&#xFF0C;&#x8BF7;&#x5C1D;&#x8BD5;&#x66F4;&#x6362;&#x65B0;&#x7248;&#x672C;&#x7684;&#x5730;&#x9762;&#x7AD9;</p>
+<h3 id=""><a name="" class="plugin-anchor" href="#"><i class="fa fa-link" aria-hidden="true"></i></a><img src="../assets/Capture3.png" alt=""></h3>
+<h2 id="&#x624B;&#x52A8;&#x5206;&#x6790;&#x95EA;&#x5B58;&#x65E5;&#x5FD7;&#xFF1A;"><a name="&#x624B;&#x52A8;&#x5206;&#x6790;&#x95EA;&#x5B58;&#x65E5;&#x5FD7;&#xFF1A;" class="plugin-anchor" href="#&#x624B;&#x52A8;&#x5206;&#x6790;&#x95EA;&#x5B58;&#x65E5;&#x5FD7;&#xFF1A;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x624B;&#x52A8;&#x5206;&#x6790;&#x95EA;&#x5B58;&#x65E5;&#x5FD7;&#xFF1A; </h2>
+<hr>
+<p>&#x901A;&#x8FC7;Mavlink&#x4E0B;&#x8F7D;&#x65E5;&#x5FD7;&#xFF0C;&#x4F1A;&#x5B58;&#x653E;&#x5728;MissionPlanner/logs&#x4E0B;&#x7EA7;&#x76EE;&#x5F55;&#xFF0C;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x98DE;&#x884C;&#x5668;&#x7C7B;&#x578B;&#x547D;&#x540D;&#x7684;&#x76EE;&#x5F55;&#x3002;&#x5982;QUADCOPTER or ROVER</p>
+<p>&#x65E5;&#x5FD7;&#x7684;&#x57FA;&#x672C;&#x683C;&#x5F0F;&#x662F;&#xFF1A;</p>
+<ul>
+<li>&#x884C;&#x53F7;&#x5728;&#x65E5;&#x5FD7;&#x5206;&#x6790;&#x7A97;&#x53E3;&#x7684;&#x5DE6;&#x4FA7;</li>
+<li><p>&#x56FA;&#x4EF6;&#x7248;&#x672C;&#x53F7;&#x548C;&#x98DE;&#x884C;&#x5668;&#x7C7B;&#x578B;&#x5728;&#x9876;&#x90E8;&#x53EF;&#x4EE5;&#x663E;&#x793A;</p>
+</li>
+<li><p>FMT&#x6D88;&#x606F;&#x663E;&#x793A;&#x7684;&#x662F;&#x6BCF;&#x4E2A;&#x4E0D;&#x540C;&#x6D88;&#x606F;&#x7C7B;&#x578B;&#x5185;&#x5BB9;</p>
+</li>
+<li><p>PARM&#x884C;&#x663E;&#x793A;&#x53C2;&#x6570;&#x7C7B;&#x578B;&#x548C;&#x5BF9;&#x5E94;&#x7684;&#x503C; &#xFF08;&#x6309;&#x98DE;&#x63A7;EEPROM&#x4E2D;&#x7684;&#x987A;&#x5E8F;&#x6392;&#x5217;&#xFF09;</p>
+</li>
+<li><p>&#x98DE;&#x884C;&#x6570;&#x636E;&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x62EC;GPS&#xFF0C;IMU</p>
+</li>
+</ul>
+<p><img src="../assets/logs2.jpg" alt=""></p>
+<p>&#x901A;&#x8FC7;&#x70B9;&#x51FB;&#x9009;&#x5B9A;&#x7684;&#x884C;&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x56FE;&#x8868;&#x548C;&#x98DE;&#x884C;&#x6570;&#x636E;&#xFF0C;&#x5217;&#x6807;&#x9898;&#x4F1A;&#x968F;&#x4E4B;&#x66F4;&#x65B0;&#x3002;&#x4E0B;&#x4E00;&#x5217;&#x7528;&#x56FE;&#x8868;&#x8868;&#x793A;&#x7684;&#x5217;&#xFF0C;&#x9009;&#x4E2D;&#x540E;&#x70B9;&#x51FB;&#x201C;Graph this data&#x201D;&#x6309;&#x94AE;&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;&#x4EE5;&#x4E0A;ATT&#x2019;S Roll-In &#x53CA; Roll&#x6570;&#x636E;&#x4F1A;&#x88AB;&#x56FE;&#x8868;&#x5316;&#x3002;&#x6ED1;&#x52A8;&#x9F20;&#x6807;&#x6EDA;&#x8F6E;&#x80FD;&#x591F;&#x653E;&#x5927;&#x548C;&#x7F29;&#x5C0F;&#x56FE;&#x8868;&#x3002;&#x540C;&#x6837;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x9009;&#x4E2D;&#x56FE;&#x8868;&#x4E2D;&#x67D0;&#x4E00;&#x533A;&#x57DF;&#x653E;&#x5927;&#x6216;&#x7F29;&#x5C0F;&#x3002;&#x901A;&#x8FC7;&#x53F3;&#x51FB;&#x9F20;&#x6807;&#xFF0C;&#x5E76;&#x9009;&#x4E2D;&#x201C;Set Scale to Default&#x201D;&#x540C;&#x6837;&#x53EF;&#x4EE5;&#x7F29;&#x5C0F;&#x56FE;&#x8868;&#x3002;&#x70B9;&#x51FB;&#x94FE;&#x63A5;Here&#x2019;s</p>
+<p>&#x6709;&#x4E00;&#x4E2A;&#x8BE5;&#x7279;&#x5F81;&#x7684;&#x8FF7;&#x4F60;&#x7684;&#x6559;&#x7A0B;&#x3002;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5148;&#x70B9;&#x51FB;&#x7B2C;&#x4E00;&#x5217;&#x5E76;&#x4ECE;&#x4E0B;&#x62C9;&#x83DC;&#x5355;&#x4E2D;&#x9009;&#x4E2D;&#x7B2C;&#x4E00;&#x5217;&#x6765;&#x5FFD;&#x7565;&#x7B2C;&#x4E00;&#x5217;&#xFF08;&#x98DE;&#x884C;&#x6570;&#x636E;&#x4FE1;&#x606F;&#x7C7B;&#x578B;&#xFF09;&#x3002;&#x8FD9;&#x5C24;&#x5176;&#x5BF9;&#x4E8E;&#x901A;&#x8FC7;MP&#x6D4F;&#x89C8;&#x4E0D;&#x540C;&#x98DE;&#x884C;&#x6A21;&#x5F0F;&#xFF08;&#x8BE6;&#x89C1;MODE&#x4FE1;&#x606F;&#xFF09;&#x5341;&#x5206;&#x6709;&#x7528;&#x3002;&#x518D;&#x6B21;&#x70B9;&#x51FB;&#x7B2C;&#x4E00;&#x5217;&#x201C;Cancel&#x201D;&#x6309;&#x94AE;&#x6E05;&#x9664;&#x8FC7;&#x6EE4;&#x3002;</p>
+<p><img src="../assets/log3.jpg" alt=""></p>
+<h2 id="&#x8BBE;&#x7F6E;&#x8981;&#x8BB0;&#x5F55;&#x7684;&#x6570;&#x636E;"><a name="&#x8BBE;&#x7F6E;&#x8981;&#x8BB0;&#x5F55;&#x7684;&#x6570;&#x636E;" class="plugin-anchor" href="#&#x8BBE;&#x7F6E;&#x8981;&#x8BB0;&#x5F55;&#x7684;&#x6570;&#x636E;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x8BBE;&#x7F6E;&#x8981;&#x8BB0;&#x5F55;&#x7684;&#x6570;&#x636E; </h2>
+<p>LOG_BITMASK&#x53C2;&#x6570;&#x63A7;&#x5236;&#x6570;&#x636E;&#x95EA;&#x5B58;&#x4E2D;&#x8BB0;&#x5F55;&#x7684;&#x6D88;&#x606F;&#x7C7B;&#x578B;&#x3002;mp&#x5730;&#x9762;&#x7AD9;&#x548C;ardupilot&#x7684;&#x6700;&#x65B0;&#x7248;&#x672C;&#x5141;&#x8BB8;&#x4ECE;MP&#x7684;&#x914D;&#x7F6E;/&#x8C03;&#x6574;&#xFF0C;&#x6807;&#x51C6;&#x53C2;&#x6570;&#x5C4F;&#x5E55;&#x542F;&#x7528;/&#x7981;&#x7528;&#x4E2A;&#x522B;&#x6D88;&#x606F;&#x3002;&#xFF08;&#x4E00;&#x822C;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#xFF0C;&#x4E0D;&#x7981;&#x7528;&#xFF0C;&#x5426;&#x5219;&#x53EF;&#x80FD;&#x65E0;&#x6CD5;&#x5206;&#x6790;&#x6545;&#x969C;&#x539F;&#x56E0;&#xFF09;<img src="http://doc.cuav.net/PixHack/assets/logs1.jpg" alt=""></p>
+<h2 id="&#x6D88;&#x606F;&#x8BE6;&#x89E3;&#xFF08;copter&#x56FA;&#x4EF6;&#x4E13;&#x7528;&#xFF09;"><a name="&#x6D88;&#x606F;&#x8BE6;&#x89E3;&#xFF08;copter&#x56FA;&#x4EF6;&#x4E13;&#x7528;&#xFF09;" class="plugin-anchor" href="#&#x6D88;&#x606F;&#x8BE6;&#x89E3;&#xFF08;copter&#x56FA;&#x4EF6;&#x4E13;&#x7528;&#xFF09;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6D88;&#x606F;&#x8BE6;&#x89E3;&#xFF08;COPTER&#x56FA;&#x4EF6;&#x4E13;&#x7528;&#xFF09; </h2>
+<p><strong>ATT (&#x59FF;&#x6001;&#x4FE1;&#x606F;):</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">RollIn</th>
+<th style="text-align:left">&#x98DE;&#x624B;&#x60F3;&#x8981;&#x7684;roll&#x89D2;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;&#x5398;&#x7C73;&#xFF08;&#x5DE6;&#x4FA7;&#x4E3A;&#x8D1F;&#xFF0C;&#x53F3;&#x8FB9;&#x4E3A;&#x6B63;&#xFF09;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Roll</td>
+<td style="text-align:left">&#x98DE;&#x884C;&#x5668;&#x5B9E;&#x9645;&#x7684;roll&#x89D2;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D;&#x4E3A;&#x5398;&#x7C73;&#xFF08;&#x5DE6;&#x4FA7;&#x4E3A;&#x8D1F;&#xFF0C;&#x53F3;&#x4FA7;&#x4E3A;&#x6B63;&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:left">PitchIn</td>
+<td style="text-align:left">&#x98DE;&#x624B;&#x60F3;&#x8981;&#x7684;pitch&#x89D2;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x5398;&#x7C73;-&#x5EA6;&#xFF08;&#x5F80;&#x524D;&#x4E3A;&#x8D1F;,&#x5F80;&#x540E;&#x4E3A;&#x6B63;&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:left">Pitch</td>
+<td style="text-align:left">&#x98DE;&#x884C;&#x5668;&#x5B9E;&#x9645;&#x7684;pitch&#x89D2;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x5398;&#x7C73;&#xFF08;&#x5F80;&#x524D;&#x4E3A;&#x8D1F;&#xFF0C;&#x5F80;&#x540E;&#x4E3A;&#x6B63;&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:left">YawIn</td>
+<td style="text-align:left">&#x98DE;&#x624B;&#x60F3;&#x8981;&#x7684;&#x504F;&#x822A;&#x7387;&#xFF0C;&#x8303;&#x56F4;&#xFF1A;-4500~4500&#xFF08;&#x4E0D;&#x662F;&#x5EA6;/&#x79D2;&#xFF0C;&#x987A;&#x65F6;&#x9488;&#x4E3A;&#x6B63;&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:left">Yaw</td>
+<td style="text-align:left">&#x98DE;&#x884C;&#x5668;&#x5B9E;&#x9645;&#x822A;&#x5411;&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x5EA6;&#xFF0C;&#x4E14;0=&#x5317;</td>
+</tr>
+<tr>
+<td style="text-align:left">NavYaw</td>
+<td style="text-align:left">&#x98DE;&#x624B;&#x60F3;&#x8981;&#x7684;&#x822A;&#x5411;&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x5EA6;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ATUN (&#x81EA;&#x52A8;&#x8C03;&#x53C2;&#x6982;&#x8FF0;):</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left">Axis: 0 = Roll, 1 = Pitch</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">TuneStep</td>
+<td style="text-align:left">0=&#x8FD4;&#x56DE;&#x6C34;&#x5E73;&#xFF08;&#x6D4B;&#x8BD5;&#x524D;&#x6216;&#x6D4B;&#x8BD5;&#x540E;&#xFF09;&#xFF0C;1=&#x6D4B;&#x8BD5;&#xFF08;&#x5373;&#x6267;&#x884C;&#x62BD;&#x6410;&#x6D4B;&#x8BD5;&#x54CD;&#x5E94;&#xFF09;&#xFF0C;2=&#x66F4;&#x65B0;&#x589E;&#x76CA;</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">RateMin</td>
+<td style="text-align:left">&#x672C;&#x6B21;&#x6D4B;&#x8BD5;&#x671F;&#x95F4;&#x6700;&#x4F4E;&#x7684;&#x8BB0;&#x5F55;&#x7387;</td>
+</tr>
+<tr>
+<td style="text-align:left">RateMax</td>
+<td style="text-align:left">&#x672C;&#x6D4B;&#x8BD5;&#x671F;&#x95F4;&#x6700;&#x9AD8;&#x8BB0;&#x5F55;&#x7387;</td>
+</tr>
+<tr>
+<td style="text-align:left">RPGain</td>
+<td style="text-align:left">&#x6B63;&#x5728;&#x6D4B;&#x8BD5;p&#x503C;&#x7684;&#x589E;&#x76CA;&#x503C;</td>
+</tr>
+<tr>
+<td style="text-align:left">RDGain</td>
+<td style="text-align:left">&#x6B63;&#x5728;&#x6D4B;&#x8BD5;&#x7684;&#x901F;&#x7387;D&#x589E;&#x76CA;&#x503C;</td>
+</tr>
+<tr>
+<td style="text-align:left">SPGain</td>
+<td style="text-align:left">&#x6B63;&#x5728;&#x6D4B;&#x8BD5;&#x7684;&#x81EA;&#x7A33;p&#x589E;&#x76CA;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ATDE (&#x81EA;&#x52A8;&#x8C03;&#x53C2;&#x6B65;&#x9AA4;&#x53CA;&#x7EC6;&#x8282;):</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Angle</th>
+<th style="text-align:left">&#x98DE;&#x884C;&#x5668;&#x4EE5;&#x88AB;&#x6D4B;&#x8BD5;&#x8F74;&#x7684;&#x5398;&#x7C73;&#x4E3A;&#x5355;&#x4F4D;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Rate</td>
+<td style="text-align:left">&#x88AB;&#x6D4B;&#x8BD5;&#x98DE;&#x884C;&#x5668;&#x8F74;&#x7684;&#x8F6C;&#x901F;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>CAM (&#x89E6;&#x53D1;&#x5FEB;&#x95E8;&#x65F6;&#x95F4;&#x548C;&#x4F4D;&#x7F6E;):</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">GPSTime</th>
+<th style="text-align:left">gps&#x62A5;&#x544A;&#x65F6;&#x95F4;&#xFF0C;&#x4EE5;&#x6BEB;&#x79D2;&#x4E3A;&#x5355;&#x4F4D;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Lat</td>
+<td style="text-align:left">&#x52A0;&#x901F;&#x8BA1;+gps&#x7EAC;&#x5EA6;&#x4F30;&#x7B97;</td>
+</tr>
+<tr>
+<td style="text-align:left">Lng</td>
+<td style="text-align:left">&#x52A0;&#x901F;&#x8BA1;+gps&#x7ECF;&#x5EA6;&#x4F30;&#x7B97;</td>
+</tr>
+<tr>
+<td style="text-align:left">Alt</td>
+<td style="text-align:left">&#x52A0;&#x901F;&#x8BA1;+&#x6C14;&#x538B;&#x8BA1;&#x4F30;&#x7B97;&#x9AD8;&#x5EA6;</td>
+</tr>
+<tr>
+<td style="text-align:left">Roll</td>
+<td style="text-align:left">&#x98DE;&#x884C;&#x5668;&#x7684;roll&#x89D2;&#x5EA6;&#xFF08;&#x4EE5;&#x5398;&#x7C73;&#x4E3A;&#x5355;&#x4F4D;&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:left">Pitch</td>
+<td style="text-align:left">&#x98DE;&#x884C;&#x5668;&#x4FEF;&#x4EF0;&#x89D2;&#xFF08;&#x4EE5;&#x5398;&#x7C73;&#x4E3A;&#x5355;&#x4F4D;&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:left">Yaw</td>
+<td style="text-align:left">&#x98DE;&#x884C;&#x5668;&#x822A;&#x5411;&#x89D2;&#x5EA6;&#xFF08;&#x4EE5;&#x5EA6;&#x4E3A;&#x5355;&#x4F4D;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>CMD (&#x4ECE;&#x5730;&#x9762;&#x7AD9;&#x63A5;&#x6536;&#x5230;&#x7684;&#x547D;&#x4EE4;&#x6216;&#x4F5C;&#x4E3A;&#x4EFB;&#x52A1;&#x7684;&#x4E00;&#x90E8;&#x5206;&#x7684;&#x6267;&#x884C;&#x547D;&#x4EE4;):</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">CTot</th>
+<th style="text-align:left">&#x4EFB;&#x52A1;&#x603B;&#x547D;&#x4EE4;&#x6570;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">CNum</td>
+<td style="text-align:left">&#x5728;&#x8FD9;&#x4E2A;&#x4EFB;&#x52A1;&#x4E2D;&#x7684;&#x547D;&#x4EE4;&#x53F7;(0&#x603B;&#x662F;&#x5728;&#x5BB6;&#xFF0C;1&#x662F;&#x7B2C;&#x4E00;&#x4E2A;&#x4EFB;&#x52A1;&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:left">CId</td>
+<td style="text-align:left"><a href="https://pixhawk.ethz.ch/mavlink/" target="_blank">mavlink &#x7684;&#x4FE1;&#x606F;id</a></td>
+</tr>
+<tr>
+<td style="text-align:left">Copt</td>
+<td style="text-align:left">&#x9009;&#x9879;&#x53C2;&#x6570;&#xFF08;&#x7528;&#x4E8E;&#x8BB8;&#x591A;&#x4E0D;&#x540C;&#x7684;&#x7528;&#x9014;&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:left">Prm1</td>
+<td style="text-align:left">&#x547D;&#x4EE4;&#x7684;&#x53C2;&#x6570;&#xFF08;&#x7528;&#x4E8E;&#x8BB8;&#x591A;&#x4E0D;&#x540C;&#x7684;&#x7528;&#x9014;&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:left">Alt</td>
+<td style="text-align:left">&#x6307;&#x6325;&#x90E8;&#x7684;&#x9AD8;&#x5EA6;&#xFF0C;&#x4EE5;&#x7C73;&#x4E3A;&#x5355;&#x4F4D;</td>
+</tr>
+<tr>
+<td style="text-align:left">Lat</td>
+<td style="text-align:left">&#x6307;&#x6325;&#x90E8;&#x7684;&#x7EAC;&#x5EA6;&#x4F4D;&#x7F6E;</td>
+</tr>
+<tr>
+<td style="text-align:left">Lng</td>
+<td style="text-align:left">&#x6307;&#x6325;&#x90E8;&#x7684;&#x7CBE;&#x5EA6;&#x4F4D;&#x7F6E;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>COMPASS (&#x539F;&#x59CB;&#x7F57;&#x76D8;&#x504F;&#x79FB;&#x53CA;&#x7F57;&#x76D8;&#x8865;&#x507F;&#x503C;):</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Field</th>
+<th style="text-align:left">&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">MagX, MagY. MagZ</td>
+<td style="text-align:left">x,y,z&#x8F74;&#x539F;&#x59CB;&#x78C1;&#x573A;&#x503C;</td>
+</tr>
+<tr>
+<td style="text-align:left">OfsX, OfsY, OfsZ</td>
+<td style="text-align:left">&#x539F;&#x59CB;&#x78C1;&#x504F;&#x79FB;&#xFF08;&#x4EC5;&#x5F53;compass_lenarn&#x53C2;&#x6570;&#x4E3A;1&#x65F6;&#x624D;&#x4F1A;&#x66F4;&#x6539;&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:left">MOfsX, MOfsY, MOfsZ</td>
+<td style="text-align:left">ompassmot&#x8865;&#x507F; &#x6216;&#x7535;&#x6D41;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>CURRENT (&#x7535;&#x6C60;&#x7535;&#x538B;&#xFF0C;&#x7535;&#x6D41;&#x548C;&#x7535;&#x8DEF;&#x677F;&#x7535;&#x538B;&#x4FE1;&#x606F;):</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">FIELD</th>
+<th style="text-align:left">DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Thr</td>
+<td style="text-align:left">&#x98DE;&#x884C;&#x5458;&#x8F93;&#x5165;&#x6CB9;&#x95E8;&#x4ECE; 0 ~ 1000</td>
+</tr>
+<tr>
+<td style="text-align:left">ThrInt</td>
+<td style="text-align:left">&#x603B;&#x6CB9;&#x95E8;&#xFF08;&#x5373;&#x5168;&#x90E8;&#x6CB9;&#x95E8;&#x7684;&#x603B;&#x548C;&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:left">Volt</td>
+<td style="text-align:left">&#x7535;&#x6C60;&#x7535;&#x538B;&#x4F0F;&#x7279;* 100</td>
+</tr>
+<tr>
+<td style="text-align:left">Curr</td>
+<td style="text-align:left">&#x7535;&#x6D41; * 100</td>
+</tr>
+<tr>
+<td style="text-align:left">Vcc</td>
+<td style="text-align:left">&#x4E3B;&#x677F;&#x7535;&#x538B;</td>
+</tr>
+<tr>
+<td style="text-align:left">CurrTot</td>
+<td style="text-align:left">&#x6D88;&#x8017;&#x7684;&#x603B;&#x7535;&#x6D41;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>CTUN (&#x6CB9;&#x95E8;&#x548C;&#x9AD8;&#x5EA6;&#x4FE1;&#x606F;):</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">FIELD</th>
+<th style="text-align:left">DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">ThrIn</td>
+<td style="text-align:left">&#x98DE;&#x624B;&#x8F93;&#x5165;&#x7684;&#x6CB9;&#x95E8;&#x4ECE; 0 &#x5230;1000</td>
+</tr>
+<tr>
+<td style="text-align:left">SonAlt</td>
+<td style="text-align:left">&#x58F0;&#x5450;&#x6D4B;&#x91CF;&#x5230;&#x7684;&#x9AD8;&#x5EA6;</td>
+</tr>
+<tr>
+<td style="text-align:left">BarAlt</td>
+<td style="text-align:left">&#x6C14;&#x538B;&#x8BA1;&#x6D4B;&#x91CF;&#x5230;&#x7684;&#x9AD8;&#x5EA6;</td>
+</tr>
+<tr>
+<td style="text-align:left">WPAlt</td>
+<td style="text-align:left">&#x5B9A;&#x9AD8;&#xFF0C;&#x60AC;&#x505C;&#xFF0C;&#x8FD4;&#x822A;&#x6216;&#x81EA;&#x52A8;&#x6A21;&#x5F0F;&#x4E0B;&#x7684;&#x76EE;&#x6807;&#x9AD8;&#x5EA6;</td>
+</tr>
+<tr>
+<td style="text-align:left">NavThr</td>
+<td style="text-align:left">&#x6CA1;&#x7528;&#x4F7F;&#x7528;</td>
+</tr>
+<tr>
+<td style="text-align:left">AngBst</td>
+<td style="text-align:left">&#x98DE;&#x884C;&#x5668;&#x503E;&#x659C;&#x65F6;&#x4F1A;&#x589E;&#x52A0;&#x7684;&#x6CB9;&#x95E8;&#x5927;&#x5C0F;&#xFF0C;&#x4E3A;0~1000</td>
+</tr>
+<tr>
+<td style="text-align:left">CRate</td>
+<td style="text-align:left">&#x52A0;&#x901F;&#x8BA1;&#x4E0E;&#x6C14;&#x538B;&#x8BA1;&#x4F30;&#x8BA1;&#x7684;&#x4E0A;&#x5347;&#x901F;&#x7387;&#xFF0C;&#x5355;&#x4F4D;cm/s</td>
+</tr>
+<tr>
+<td style="text-align:left">ThrOut</td>
+<td style="text-align:left">&#x6CB9;&#x95E8;&#x6700;&#x7EC8;&#x8F93;&#x51FA;&#x5927;&#x5C0F;&#x4F20;&#x9001;&#x5230;&#x7535;&#x673A;&#xFF08;&#x4ECE;0~1000&#xFF09;&#x5728;&#x81EA;&#x7A33;&#x6A21;&#x5F0F;&#x4E0B;&#x76F8;&#x5F53;&#x4E8E;thrin+angbst</td>
+</tr>
+<tr>
+<td style="text-align:left">DCRate</td>
+<td style="text-align:left">&#x98DE;&#x884C;&#x5458;&#x60F3;&#x8981;&#x7684;&#x4E0A;&#x5347;&#x901F;&#x7387;&#x5355;&#x4F4D;&#x4E3A;cm/s</td>
+</tr>
+</tbody>
+</table>
+<p><strong>D32, DU32 (&#x5355;&#x6570;&#x636E;&#x503C;&#x662F;&#x5E26;&#x7B26;&#x53F7;&#x7684;32&#x4F4D;&#x6574;&#x6570;&#x6216;&#x8005;&#x65E0;&#x7B26;&#x53F7;&#x7684;32&#x4F4D;&#x6574;&#x6570;):</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">FIELD</th>
+<th style="text-align:left">DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">id</td>
+<td style="text-align:left">&#x53D8;&#x91CF;&#x7684;&#x8BC6;&#x522B;&#x53F7;&#xFF0C;&#x53EA;&#x53EF;&#x80FD;&#x6709;&#x4E0B;&#x9762;&#x4E24;&#x4E2A;&#x503C;</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">7 = &#x5185;&#x90E8;&#x72B6;&#x6001;&#x7684;&#x4F4D;&#x63A9;&#x7801; &lt;<a href="https://github.com/ardupilot/blob/master/arducopter/arducopter.cpp#l361" target="_blank">https://github.com/ardupilot/blob/master/arducopter/arducopter.cpp#l361</a>&gt;</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left">9 = &#x7B80;&#x5355;&#x6A21;&#x5F0F;&#x7684;&#x521D;&#x59CB;&#x540D;&#x79F0;&#xFF0C;&#x5355;&#x4F4D;cm</td>
+</tr>
+</tbody>
+</table>
+<p><strong>EKF (Extended Kalman Filter</strong>):</p>
+<p><a href="http://ardupilot.org/dev/docs/extended-kalman-filter.html#extended-kalman-filter-interpreting-log-data" target="_blank">Log information here</a>(Dev Wiki). Overview<a href="http://ardupilot.org/copter/docs/common-apm-navigation-extended-kalman-filter-overview.html#common-apm-navigation-extended-kalman-filter-overview" target="_blank">here</a>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<p><strong>EV: (&#x72B6;&#x6001;&#x7F16;&#x7801;)</strong>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Event No</th>
+<th style="text-align:left">DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">10</td>
+<td style="text-align:left">&#x5DF2;&#x89E3;&#x9501;</td>
+</tr>
+<tr>
+<td style="text-align:left">11</td>
+<td style="text-align:left">&#x5DF2;&#x9501;&#x5B9A;</td>
+</tr>
+<tr>
+<td style="text-align:left">15</td>
+<td style="text-align:left">&#x81EA;&#x52A8;&#x9A7E;&#x9A76;&#xFF08;&#x98DE;&#x624B;&#x5C06;&#x6CB9;&#x95E8;&#x4E0A;&#x5347;&#x5230;&#x96F6;&#x4EE5;&#x4E0A;&#xFF0C;&#x81EA;&#x52A8;&#x9A7E;&#x9A76;&#x4EEA;&#x53EF;&#x4EE5;&#x81EA;&#x7531;&#x63A7;&#x5236;&#x6CB9;&#x95E8;&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:left">16</td>
+<td style="text-align:left">&#x81EA;&#x52A8;&#x8D77;&#x98DE;</td>
+</tr>
+<tr>
+<td style="text-align:left">18</td>
+<td style="text-align:left">&#x964D;&#x843D;&#x5B8C;&#x6BD5;</td>
+</tr>
+<tr>
+<td style="text-align:left">25</td>
+<td style="text-align:left">&#x8BBE;&#x7F6E;&#x5BB6;&#x7684;&#x4F4D;&#x7F6E;&#xFF08;&#x5BB6;&#x7684;&#x4F4D;&#x7F6E;&#x5750;&#x6807;&#x5DF2;&#x6355;&#x83B7;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>GPS:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">FIELD</th>
+<th style="text-align:left">DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Status</td>
+<td style="text-align:left">0 = &#x6CA1;&#x6709;&#x8BC6;&#x522B;&#x5230; GPS, 1 = &#x8BC6;&#x522B;&#x5230;GPS &#x4F46;&#x672A;&#x5B9A;&#x4F4D;, 2 = GPS&#x548C; 2D &#x5B9A;&#x4F4D;&#x6210;&#x529F;, 3 = GPS &#x4E0E; 3D &#x5B9A;&#x4F4D;&#x6210;&#x529F;</td>
+</tr>
+<tr>
+<td style="text-align:left">Time</td>
+<td style="text-align:left">gps&#x62A5;&#x544A;&#x65F6;&#x95F4;&#xFF0C;&#x4EE5;&#x6BEB;&#x79D2;&#x4E3A;&#x5355;&#x4F4D;</td>
+</tr>
+<tr>
+<td style="text-align:left">NSats</td>
+<td style="text-align:left">&#x5F53;&#x524D;&#x4F7F;&#x7528;&#x7684;&#x536B;&#x661F;&#x6570;&#x91CF;</td>
+</tr>
+<tr>
+<td style="text-align:left">HDop</td>
+<td style="text-align:left">&#x6D4B;&#x91CF;gps&#x5B9A;&#x4F4D;&#x7CBE;&#x5EA6;&#xFF08;1.5&#x662F;&#x597D;&#x7684;&#xFF0C;&gt;2.0&#x4E0D;&#x662F;&#x5F88;&#x597D;&#xFF09;<a href="https://en.wikipedia.org/wiki/dilution_of_precision" target="_blank">https://en.wikipedia.org/wiki/dilution_of_precision</a></td>
+</tr>
+<tr>
+<td style="text-align:left">Lat</td>
+<td style="text-align:left">&#x6839;&#x636E;gps&#x7684;&#x7EAC;&#x5EA6;</td>
+</tr>
+<tr>
+<td style="text-align:left">Lng</td>
+<td style="text-align:left">&#x6839;&#x636E;gps&#x7684;&#x7ECF;&#x5EA6;</td>
+</tr>
+<tr>
+<td style="text-align:left">RelAlt</td>
+<td style="text-align:left">&#x52A0;&#x901F;&#x8BA1;&#x4E0E;&#x6C14;&#x538B;&#x8BA1;&#x4F30;&#x7B97;&#x9AD8;&#x5EA6;&#xFF0C;&#x4EE5;&#x7C73;&#x4E3A;&#x5355;&#x4F4D;</td>
+</tr>
+<tr>
+<td style="text-align:left">Alt</td>
+<td style="text-align:left">gps&#x62A5;&#x544A;&#x7684;&#x9AD8;&#x5EA6;&#xFF08;&#x98DE;&#x63A7;&#x672A;&#x4F7F;&#x7528;&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:left">SPD</td>
+<td style="text-align:left">&#x6C34;&#x5E73;&#x5730;&#x9762;&#x901F;&#x5EA6; &#xFF0C;&#x5355;&#x4F4D;m/s</td>
+</tr>
+<tr>
+<td style="text-align:left">GCrs</td>
+<td style="text-align:left">&#x822A;&#x5411;&#xFF08;0=&#x5317;&#xFF09;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>IMU (&#x52A0;&#x901F;&#x5EA6;&#x548C;&#x9640;&#x87BA;&#x4EEA;&#x4FE1;&#x606F;):</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">FIELD</th>
+<th style="text-align:left">DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">GyrX, GyrY, GyrZ</td>
+<td style="text-align:left">&#x539F;&#x59CB;&#x9640;&#x87BA;&#x4EEA;&#x65CB;&#x8F6C;&#x901F;&#x5EA6;&#x3002;&#x5355;&#x4F4D;:&#x5EA6;/&#x79D2;</td>
+</tr>
+<tr>
+<td style="text-align:left">AccX, AccY, AccZ</td>
+<td style="text-align:left">&#x539F;&#x59CB;&#x52A0;&#x901F;&#x5EA6;&#x503C; &#xFF0C;&#x5355;&#x4F4D;&#xFF1A;m/s/s</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Mode (&#x98DE;&#x884C;&#x4FE1;&#x606F;):</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">FIELD</th>
+<th style="text-align:left">DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Mode</td>
+<td style="text-align:left">&#x98DE;&#x884C;&#x6A21;&#x5F0F;&#x663E;&#x793A;&#x4E3A;&#x5B57;&#x7B26;&#x4E32; (&#x5373; STABILIZE, LOITER,&#x7B49;)</td>
+</tr>
+<tr>
+<td style="text-align:left">ThrCrs</td>
+<td style="text-align:left">&#x5DE1;&#x822A;&#x6CB9;&#x95E8;(&#x4ECE; 0 ~ 1000) &#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x63A8;&#x6D4B;&#x60AC;&#x505C;&#x9700;&#x8981;&#x4EC0;&#x4E48;&#x6CB9;&#x95E8;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>NTUN (&#x5BFC;&#x822A;&#x4FE1;&#x606F;):</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">FIELD</th>
+<th style="text-align:left">DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">WPDst</td>
+<td style="text-align:left">&#x4E0B;&#x4E00;&#x4E2A;&#x822A;&#x70B9;&#x7684;&#x8DDD;&#x79BB;&#xFF08;&#x6216;&#x60AC;&#x505C;&#x76EE;&#x6807;&#xFF09; &#x4EE5;&#x5398;&#x7C73;&#x4E3A;&#x5355;&#x4F4D;&#xFF0C;&#x4EC5;&#x5728;Loiter, RTL, Auto&#x6A21;&#x5F0F;&#x4E0B;&#x66F4;&#x65B0;.</td>
+</tr>
+<tr>
+<td style="text-align:left">WPBrg</td>
+<td style="text-align:left">&#x4E0B;&#x4E00;&#x4E2A;&#x822A;&#x70B9;&#x7684;&#x65B9;&#x4F4D;&#xFF08;&#x4EE5;&#x5EA6;&#x4E3A;&#x5355;&#x4F4D;&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:left">PErX</td>
+<td style="text-align:left">&#x76F4;&#x5347;&#x673A;&#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x822A;&#x70B9;&#x7684;&#x7EAC;&#x5EA6;&#x65B9;&#x5411;&#x7684;&#x8DDD;&#x79BB;</td>
+</tr>
+<tr>
+<td style="text-align:left">PErY</td>
+<td style="text-align:left">&#x76F4;&#x5347;&#x673A;&#x4E0B;&#x4E00;&#x4E2A;&#x822A;&#x70B9;&#x7684;&#x7EAC;&#x5EA6;&#x65B9;&#x5411;&#x7684;&#x8DDD;&#x79BB;</td>
+</tr>
+<tr>
+<td style="text-align:left">DVelX</td>
+<td style="text-align:left">&#x7EAC;&#x5EA6;&#x65B9;&#x5411;&#x6240;&#x9700;&#x901F;&#x5EA6;&#xFF08;&#x4EE5;&#x5EA6;/&#x79D2;&#x4E3A;&#x5355;&#x4F4D;&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:left">DVelY</td>
+<td style="text-align:left">&#x7ECF;&#x5EA6;&#x65B9;&#x5411;&#x6240;&#x9700;&#x901F;&#x5EA6;&#xFF08;&#x4EE5;&#x5EA6;/&#x79D2;&#x4E3A;&#x5355;&#x4F4D;&#xFF09;</td>
+</tr>
+<tr>
+<td style="text-align:left">VelX</td>
+<td style="text-align:left">&#x7EAC;&#x5EA6;&#x65B9;&#x5411;&#x7684;&#x5B9E;&#x9645;&#x52A0;&#x901F;&#x5EA6;+&#x6C14;&#x538B;&#x8BA1;&#x4F30;&#x8BA1;&#x901F;&#x5EA6;</td>
+</tr>
+<tr>
+<td style="text-align:left">VelY</td>
+<td style="text-align:left">&#x7ECF;&#x5EA6;&#x65B9;&#x5411;&#x7684;&#x5B9E;&#x9645;&#x52A0;&#x901F;&#x5EA6;+gps&#x4F30;&#x7B97;&#x901F;&#x5EA6;</td>
+</tr>
+<tr>
+<td style="text-align:left">DAcX</td>
+<td style="text-align:left">&#x7EAC;&#x5EA6;&#x65B9;&#x5411;&#x7684;&#x6240;&#x9700;&#x52A0;&#x901F;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D;cm/s/s</td>
+</tr>
+<tr>
+<td style="text-align:left">DAcY</td>
+<td style="text-align:left">&#x7ECF;&#x5EA6;&#x65B9;&#x5411;&#x7684;&#x6240;&#x9700;&#x52A0;&#x901F;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D;cm/s/s</td>
+</tr>
+<tr>
+<td style="text-align:left">DRol</td>
+<td style="text-align:left">&#x6240;&#x9700;roll&#x89D2;&#x5EA6; &#x5355;&#x4F4D;&#xFF1A;&#x5398;/&#x5EA6;</td>
+</tr>
+<tr>
+<td style="text-align:left">DPit</td>
+<td style="text-align:left">&#x6240;&#x9700;pitch&#x89D2;&#x5EA6;&#xFF0C;&#x5355;&#x4F4D;&#xFF1A;&#x5398;/&#x5EA6;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>PM (performance monitoring):</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">FIELD</th>
+<th style="text-align:left">DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">RenCnt</td>
+<td style="text-align:left">DCM renormalization count - a high number may indicate problems in DCM (extremely rare)</td>
+</tr>
+<tr>
+<td style="text-align:left">RenBlw</td>
+<td style="text-align:left">DCM renormalization blow-up count - how many times DCM had to completely rebuild the DCM matrix since the last PM. Normally innocuous but a number that constantly grows may be an indication that DCM is having troubles calculating the attitude (extremely rare)</td>
+</tr>
+<tr>
+<td style="text-align:left">FixCnt</td>
+<td style="text-align:left">The number of GPS fixes received since the last PM message was received (it&#x2019;s hard to imagine how this would be useful)</td>
+</tr>
+<tr>
+<td style="text-align:left">NLon</td>
+<td style="text-align:left">Number of long running main loops (i.e. loops that take more than 5% longer than the 10ms they should)</td>
+</tr>
+<tr>
+<td style="text-align:left">NLoop</td>
+<td style="text-align:left">The total number of loops since the last PM message was displayed. This allows you to calculate the percentage of slow running loops (which should never be higher than 15%). Note that the value will depend on the autopilot clock speed.</td>
+</tr>
+<tr>
+<td style="text-align:left">MaxT</td>
+<td style="text-align:left">The maximum time that any loop took since the last PM message. This should be close to 10,000 but will be up to 6,000,000 during the interval where the motors are armed</td>
+</tr>
+<tr>
+<td style="text-align:left">PMT</td>
+<td style="text-align:left">A number that increments each time a heart beat is received from the ground station</td>
+</tr>
+<tr>
+<td style="text-align:left">I2CErr</td>
+<td style="text-align:left">The number of I2C errors since the last PM message. Any I2C errors may indicate a problem on the I2C bus which may in turn slow down the main loop and cause performance problems.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>RCOUT (pwm output to individual RC outputs):</strong></p>
+<p>RC1, RC2, etc :</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Error</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th style="text-align:left"></th>
+<th style="text-align:left">DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1:Main</td>
+<td style="text-align:left">&#xFF08;&#x6CA1;&#x7528;&#x8FC7;)</td>
+</tr>
+<tr>
+<td style="text-align:left">2:Radio&#xFF08;&#x65E0;&#x7EBF;&#x7535;&#xFF09;</td>
+<td style="text-align:left">ECode 1: &#x201C;Late Frame&#x201D; &#x610F;&#x5473;&#x7740;&#x98DE;&#x63A7;&#x8D85;&#x8FC7;&#x4E24;&#x79D2;&#x672A;&#x63A5;&#x6536;&#x5230;&#x9065;&#x63A7;&#x4FE1;&#x53F7;</td>
+</tr>
+<tr>
+<td style="text-align:left">3:Compass&#xFF08;&#x7F57;&#x76D8;&#xFF09;</td>
+<td style="text-align:left">ECode 1: &#x6307;&#x5357;&#x9488;&#x4E0D;&#x80FD;&#x521D;&#x59CB;&#x5316;&#xFF08;&#x53EF;&#x80FD;&#x662F;&#x786C;&#x4EF6;&#x95EE;&#x9898;&#xFF09;ECode 0: &#x4EE5;&#x4E0A;&#x9519;&#x8BEF;&#x89E3;&#x51B3;</td>
+</tr>
+<tr>
+<td style="text-align:left">4:Optical flow&#xFF08;&#x5149;&#x6D41;&#xFF09;</td>
+<td style="text-align:left">Ecode 1: &#x65E0;&#x6CD5;&#x521D;&#x59CB;&#x5316;</td>
+</tr>
+<tr>
+<td style="text-align:left">5:Throttle failsafe&#xFF08;&#x6CB9;&#x95E8;&#x5B89;&#x5168;&#x4FDD;&#x62A4;&#xFF09;</td>
+<td style="text-align:left">ECode 1: &#x6CB9;&#x95E8;&#x964D;&#x5230; FS_THR_VALUE &#xFF08;&#x5931;&#x63A7;&#x6CB9;&#x95E8;&#x89E6;&#x53D1;&#x503C;&#xFF09;&#x4EE5;&#x4E0B;&#xFF0C;&#x53EF;&#x80FD;&#x662F;&#x98DE;&#x63A7;&#x6CA1;&#x6709;&#x63A5;&#x6536;&#x5230;&#x9065;&#x63A7;&#x4FE1;&#x53F7;&#xFF08;&#x6CB9;&#x95E8;&#xFF09;&#xFF0C;&#x8BF7;&#x68C0;&#x67E5;&#x9065;&#x63A7;&#x4FE1;&#x53F7;&#x8F93;&#x5165;&#x6216;&#x8005;&#x5931;&#x63A7;&#x4FDD;&#x62A4;&#x8BBE;&#x7F6E; ECode 0: &#x4E0A;&#x8FF0;&#x9519;&#x8BEF;&#x89E3;&#x51B3;</td>
+</tr>
+<tr>
+<td style="text-align:left">6:Battery failsafe&#xFF08;&#x7535;&#x6C60;&#x4F4E;&#x538B;&#x4FDD;&#x62A4;&#xFF09;</td>
+<td style="text-align:left">ECode 1: &#x7535;&#x6C60;&#x7535;&#x538B;&#x4F4E;&#x4E8E;LOW_VOLT &#xFF08;&#x4F4E;&#x538B;&#x4FDD;&#x62A4;&#x89E6;&#x53D1;&#x503C;&#xFF09;&#x6216;&#x7535;&#x6C60;&#x8FC7;&#x5EA6;&#x653E;&#x7535;&#x80FD;&#x529B;&#x8D85;&#x8FC7;BATT_CAPACITY</td>
+</tr>
+<tr>
+<td style="text-align:left">7: GPS failsafe&#xFF08;gps&#x5B89;&#x5168;&#x6545;&#x969C;&#xFF09;</td>
+<td style="text-align:left">ECode 1: gps&#x65AD;&#x5F00;&#x9501;&#x5B9A;&#x81F3;&#x5C11;5&#x79D2;&#x949F;ECode 0: gps&#x6062;&#x590D;&#x9501;&#x5B9A;</td>
+</tr>
+<tr>
+<td style="text-align:left">8: GCS failsafe&#xFF08;&#x5730;&#x9762;&#x7AD9;&#x5B89;&#x5168;&#x4FDD;&#x62A4;&#xFF09;</td>
+<td style="text-align:left">ECode 1: &#x5730;&#x9762;&#x7AD9;&#x64CD;&#x7EB5;&#x6746;&#x81F3;&#x5C11;&#x4E94;&#x79D2;&#x949F;&#x672A;&#x53D8;&#x5316;ECode 0: &#x6062;&#x590D;&#x5730;&#x9762;&#x7AD9;&#x66F4;&#x65B0;</td>
+</tr>
+<tr>
+<td style="text-align:left">9: Fence&#xFF08;&#x5730;&#x7406;&#x56F4;&#x680F;&#xFF09;</td>
+<td style="text-align:left">ECode 1: &#x8D85;&#x8FC7;&#x56F4;&#x680F;&#x9650;&#x5B9A;&#x9AD8;&#x5EA6; ECode 2: &#x8D85;&#x8FC7;&#x56F4;&#x680F;&#x9650;&#x5B9A;&#x8303;&#x56F4; ECode 3:&#x540C;&#x65F6;&#x8D85;&#x8FC7;&#x56F4;&#x680F;&#x9650;&#x5B9A;&#x8303;&#x56F4;&#x548C;&#x9AD8;&#x5EA6; ECode 0: &#x98DE;&#x884C;&#x5668;&#x56DE;&#x5230;&#x9650;&#x5B9A;&#x8303;&#x56F4;&#x5185;</td>
+</tr>
+<tr>
+<td style="text-align:left">10: Flight Mode&#xFF08;&#x98DE;&#x884C;&#x6A21;&#x5F0F;&#xFF09;</td>
+<td style="text-align:left">ECode 0 ~ 17: &#x98DE;&#x884C;&#x5668;&#x5207;&#x6362;&#x5230;&#x60F3;&#x8981;&#x7684;&#x6A21;&#x5F0F;&#x5931;&#x8D25;: 0=Stabilize, 1=Acro, 2=AltHold, 3=Auto, 4=Guided, 5=Loiter, 6=RTL, 7=Circle, 8=Position, 9=Land, 10=OF_Loiter, 11=Drift, 13=Sport, 14=Flip, 15=AutoTune, 16=PosHold, 17=Brake</td>
+</tr>
+<tr>
+<td style="text-align:left">11: GPS</td>
+<td style="text-align:left">ECode 2: GPS &#x6545;&#x969C; ECode 0: GPS &#x6545;&#x969C;&#x89E3;&#x9664;</td>
+</tr>
+<tr>
+<td style="text-align:left">12: Crash Check&#xFF08;&#x649E;&#x51FB;&#x68C0;&#x67E5;&#xFF09;</td>
+<td style="text-align:left">ECode 1: &#x68C0;&#x6D4B;&#x5230;&#x649E;&#x51FB;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ERR(&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x4EE3;&#x53F7;)</strong></p>
+<p><strong>&#x4E0B;&#x9762;&#x5217;&#x51FA;&#xFF1A;&#x5B50;&#x7CFB;&#x7EDF;&#x53CA;&#x9519;&#x8BEF;&#x4EE3;&#x7801;</strong></p>
+<p><strong>1&#xFF1A;Main(&#x4ECE;&#x672A;&#x4F7F;&#x7528;)</strong></p>
+<p><strong>2&#xFF1A;&#x65E0;&#x7EBF;&#x7535;&#xFF08;Radio&#xFF09;</strong></p>
+<p><strong>ECode 1&#xFF1A;&#x201C;Late Frame&#x201D;&#x610F;&#x601D;&#x662F;APM&#x7684;&#x677F;&#x8F7D;ppm&#x7F16;&#x7801;&#x5668;&#xFF0C;&#x81F3;&#x5C11;2&#x79D2;&#x949F;&#x4E86;&#x6CA1;&#x6709;&#x66F4;&#x65B0;&#x6570;&#x636E;&#x3002;</strong></p>
+<p><strong>ECode 0&#xFF1A;&#x610F;&#x601D;&#x662F;ppm&#x7F16;&#x7801;&#x5668;&#x6062;&#x590D;&#x6570;&#x636E;&#x66F4;&#x65B0;&#xFF0C;&#x9519;&#x8BEF;&#x5DF2;&#x89E3;&#x51B3;&#x3002;</strong></p>
+<p><strong>3&#xFF1A;Compass&#xFF08;&#x7F57;&#x76D8;&#xFF09;</strong></p>
+<p><strong>ECode 1&#xFF1A;&#x7F57;&#x76D8;&#x521D;&#x59CB;&#x5316;&#x5931;&#x8D25;(&#x5F88;&#x53EF;&#x80FD;&#x662F;&#x786C;&#x4EF6;&#x95EE;&#x9898;)</strong></p>
+<p><strong>ECode 2&#xFF1A;&#x4ECE;&#x7F57;&#x76D8;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#x5931;&#x8D25;&#xFF08;&#x53EF;&#x80FD;&#x662F;&#x786C;&#x4EF6;&#x95EE;&#x9898;&#xFF09;</strong></p>
+<p><strong>ECode&#xFF1A;&#x4E0A;&#x8FF0;&#x9519;&#x8BEF;&#x5DF2;&#x89E3;&#x51B3;</strong></p>
+<p><strong>4&#xFF1A;Optical flow&#xFF08;&#x5149;&#x6D41;&#xFF09;</strong></p>
+<p><strong>ECode 1&#xFF1A;&#x521D;&#x59CB;&#x5316;&#x5931;&#x8D25;(&#x5F88;&#x53EF;&#x80FD;&#x662F;&#x786C;&#x4EF6;&#x95EE;&#x9898;)</strong></p>
+<p><strong>5&#xFF1A;&#x6CB9;&#x95E8;&#x5B89;&#x5168;&#x6545;&#x969C;</strong></p>
+<p><strong>ECode 1&#xFF1A;&#x6CB9;&#x95E8;&#x4E0B;&#x964D;&#x5230;&#x53C2;&#x6570;FS_THR_VALUE&#x4EE5;&#x4E0B;,&#x53EF;&#x80FD; &#x6570;&#x4F20; RX/TX&#x5931;&#x53BB;&#x8FDE;&#x63A5;</strong></p>
+<p><strong>ECode 0&#xFF1A;&#x4E0A;&#x8FF0;&#x95EE;&#x9898;&#x89E3;&#x51B3;&#xFF0C;&#x610F;&#x601D;&#x662F; &#x6570;&#x4F20; RX/TX&#x6062;&#x590D;&#x8FDE;&#x63A5;</strong></p>
+<p><strong>6&#xFF1A;&#x7535;&#x6C60;&#x5B89;&#x5168;&#x6545;&#x969C;</strong></p>
+<p><strong>ECode 1&#xFF1A;&#x7535;&#x6C60;&#x7535;&#x538B;&#x4F4E;&#x4E8E;&#x53C2;&#x6570;LOW_VOLT&#xFF0C;&#x6216;&#x7535;&#x6C60;&#x8FC7;&#x5EA6;&#x653E;&#x7535;&#x80FD;&#x529B;&#x8D85;&#x8FC7;&#x53C2;&#x6570;BATT_CAPACITY</strong></p>
+<p><strong>7&#xFF1A;GPS&#x5B89;&#x5168;&#x6545;&#x969C;</strong></p>
+<p><strong>ECode 1&#xFF1A;GPS&#x65AD;&#x5F00;&#x9501;&#x5B9A;&#x81F3;&#x5C11;5&#x79D2;&#x949F;</strong></p>
+<p><strong>ECode 0&#xFF1A;GPS&#x6062;&#x590D;&#x9501;&#x5B9A;</strong></p>
+<p><strong>8&#xFF1A;GCS(&#x5730;&#x9762;&#x7AD9;)&#x5B89;&#x5168;&#x6545;&#x969C;</strong></p>
+<p><strong>ECode 1&#xFF1A;&#x5730;&#x9762;&#x7AD9;&#x7684;&#x64CD;&#x7EB5;&#x6746;&#xFF0C;&#x81F3;&#x5C11;5&#x79D2;&#x949F;&#x672A;&#x53D8;&#x5316;&#x3002;</strong></p>
+<p><strong>ECode 0&#xFF1A;&#x6062;&#x590D;&#x5730;&#x9762;&#x7AD9;&#x7684;&#x66F4;&#x65B0;</strong></p>
+<p><strong>9&#xFF1A;&#x56F4;&#x680F;</strong></p>
+<p><strong>ECode 1&#xFF1A;&#x8D85;&#x8FC7;&#x7535;&#x5B50;&#x56F4;&#x680F;&#x9650;&#x5B9A;&#x9AD8;&#x5EA6;</strong></p>
+<p><strong>ECode 2&#xFF1A;&#x8D85;&#x8FC7;&#x7535;&#x5B50;&#x56F4;&#x680F;&#x9650;&#x5B9A;&#x8303;&#x56F4;</strong></p>
+<p><strong>ECode 3&#xFF1A;&#x8D85;&#x8FC7;&#x9650;&#x5B9A;&#x6D77;&#x62D4;&#x9AD8;&#x5EA6;&#x548C;&#x56F4;&#x680F;&#x8303;&#x56F4;</strong></p>
+<p><strong>ECode 1&#xFF1A;&#x98DE;&#x884C;&#x5668;&#x56DE;&#x5230;&#x9650;&#x5B9A;&#x8303;&#x56F4;&#x5185;</strong></p>
+<p><strong>10&#xFF1A;&#x98DE;&#x884C;&#x6A21;&#x5F0F;</strong></p>
+<p><strong>ECode 0 &#x2013; 10&#xFF1A;&#x98DE;&#x884C;&#x5668;&#x4E0D;&#x80FD;&#x8FDB;&#x5165;&#x60F3;&#x8981;&#x7684;&#x98DE;&#x884C;&#x6A21;&#x5F0F;</strong></p>
+<p><strong>&#xFF08;0 = &#x81EA;&#x7A33;&#xFF0C;1 = &#x7279;&#x6280;&#xFF0C;2 = &#x5B9A;&#x9AD8;&#xFF0C;3 = &#x81EA;&#x52A8;&#xFF0C;4 = &#x5BFC;&#x822A;&#xFF0C;5 = &#x60AC;&#x505C;&#xFF0C;6 = &#x8FD4;&#x822A;&#xFF0C;7 = &#x76D8;&#x65CB;&#xFF0C;8 = &#x5B9A;&#x4F4D;&#xFF0C;9 = &#x7740;&#x9646;&#xFF0C;10 = &#x5149;&#x6D41;&#x2014;&#x60AC;&#x505C;&#xFF09;</strong></p>
+<p><strong>11&#xFF1A;GPS</strong></p>
+<p><strong>ECode 2&#xFF1A;GPS&#x6545;&#x969C;</strong></p>
+<p><strong>ECode 0&#xFF1A;GPS&#x5DF2;&#x6545;&#x969C;&#x6E05;&#x9664;</strong></p>
+<p><strong>12&#xFF1A;&#x649E;&#x51FB;&#x68C0;&#x67E5;</strong></p>
+<p><strong>ECode 1&#xFF1A;&#x68C0;&#x6D4B;&#x5230;&#x649E;&#x51FB;</strong></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 日志概述和分析">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="diagnosing-problems-using-logs.html" class="navigation navigation-next " aria-label="Next page: 诊断硬件问题">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"闪存日志分析","level":"1.7.1","depth":2,"next":{"title":"诊断硬件问题","level":"1.7.2","depth":2,"path":"log/diagnosing-problems-using-logs.md","ref":"log/diagnosing-problems-using-logs.md","articles":[]},"previous":{"title":"日志概述和分析","level":"1.7","depth":1,"path":"log/README.md","ref":"log/README.md","articles":[{"title":"闪存日志分析","level":"1.7.1","depth":2,"path":"log/dataflash.md","ref":"log/dataflash.md","articles":[]},{"title":"诊断硬件问题","level":"1.7.2","depth":2,"path":"log/diagnosing-problems-using-logs.md","ref":"log/diagnosing-problems-using-logs.md","articles":[]},{"title":"遥测日志分析","level":"1.7.3","depth":2,"path":"log/tlogs.md","ref":"log/tlogs.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["anchors","back-to-top-button","page-toc-button","prism","richquotes","search-pro","toolbar","-fontsettings","-highlight","-livereload","-lunr","-search","-sharing","cuav-doc-chapters@git+https://github.com/cuav/gitbook-plugin-cuav-doc-chapters.git","cuav-doc-favicon@git+https://github.com/cuav/gitbook-plugin-cuav-doc-favicon.git","cuav-doc-navbar@git+https://github.com/cuav/gitbook-plugin-cuav-doc-navbar.git","cuav-fontsettings@git+https://github.com/cuav/gitbook-plugin-cuav-fontsettings.git","cuav-minifier@git+https://github.com/cuav/gitbook-plugin-cuav-minifier.git","cuav-renderer@git+https://github.com/cuav/gitbook-plugin-cuav-renderer.git","youtube"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"cuav-doc-chapters":{},"prism":{},"youtube":{},"search-pro":{},"cuav-renderer":{},"cuav-doc-navbar":{},"cuav-minifier":{},"richquotes":{},"page-toc-button":{},"back-to-top-button":{},"cuav-fontsettings":{},"cuav-doc-favicon":{},"toolbar":{"buttons":[{"label":"Bug tracker","icon":"fa fa-bug","position":"left","url":"https://github.com/cuav/doc-tutorial-plane/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"},{"label":"Edit page on github","icon":"fa fa-pencil-square-o","position":"left","url":"https://github.com/cuav/doc-tutorial-plane/edit/master/{{filepath_lang}}"},{"label":"GitHub","icon":"fa fa-github","url":"https://github.com/cuav/doc-tutorial-plane"}]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"plane","language":"zh-hans","gitbook":"*","description":"固定翼教程"},"file":{"path":"log/dataflash.md","mtime":"2019-03-07T05:24:18.438Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-07T05:25:20.198Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toolbar/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-cuav-doc-chapters/cuav-doc-chapters.js"></script>
+        
+    
+
+    </body>
+</html>
+

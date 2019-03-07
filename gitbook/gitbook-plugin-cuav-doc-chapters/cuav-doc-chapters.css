@@ -1,0 +1,38 @@
+.book-summary .chapter > .articles {
+  overflow: hidden;
+  max-height: 0;
+}
+
+.book-summary .chapter.cuav-expanded > .articles {
+  max-height: 9999px;
+}
+
+.book-summary ul.summary li a,
+.book-summary ul.summary li span {
+  padding-left: 30px;
+  cursor: pointer;
+}
+
+.book-summary .cuav-trigger {
+  position: absolute;
+  padding: 13px 0 0 13px;
+  top: 0;
+  left: 0;
+}
+
+.book-summary .cuav-trigger:before {
+  content: "\f0da";
+}
+
+.book-summary .cuav-expanded > a .cuav-trigger,
+.book-summary .cuav-expanded > span .cuav-trigger {
+  position: absolute;
+  padding: 13px 0 0 11px;
+  top: 0;
+  left: 0;
+}
+
+.book-summary .cuav-expanded > a .cuav-trigger:before,
+.book-summary .cuav-expanded > span .cuav-trigger:before {
+  content: "\f0d7";
+}
