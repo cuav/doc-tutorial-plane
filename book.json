@@ -1,0 +1,49 @@
+{
+  "title": "{plane}",
+  "description": "{固定翼教程}",
+  "language": "zh-hans",
+  "plugins": [
+    "anchors",
+    "back-to-top-button",
+    "page-toc-button",
+    "prism",
+    "richquotes",
+    "search-pro",
+    "toolbar",
+    "-fontsettings",
+    "-highlight",
+    "-livereload",
+    "-lunr",
+    "-search",
+    "-sharing",
+    "cuav-doc-chapters@git+https://github.com/cuav/gitbook-plugin-cuav-doc-chapters.git",
+    "cuav-doc-favicon@git+https://github.com/cuav/gitbook-plugin-cuav-doc-favicon.git",
+    "cuav-doc-navbar@git+https://github.com/cuav/gitbook-plugin-cuav-doc-navbar.git",
+    "cuav-fontsettings@git+https://github.com/cuav/gitbook-plugin-cuav-fontsettings.git",
+    "cuav-minifier@git+https://github.com/cuav/gitbook-plugin-cuav-minifier.git",
+    "cuav-renderer@git+https://github.com/cuav/gitbook-plugin-cuav-renderer.git"
+  ],
+  "pluginsConfig": {
+    "toolbar": {
+      "buttons": [
+        {
+          "label": "Bug tracker",
+          "icon": "fa fa-bug",
+          "position": "left",
+          "url": "https://github.com/cuav/{仓库名}/issues/new?title=Doc+Bug:+{{title}}&body=DESCRIBE+PROBLEM+WITH+DOCS+HERE%0A%0ABug+Page:+[{{title}}]({{url}})"
+        },
+        {
+          "label": "Edit page on github",
+          "icon": "fa fa-pencil-square-o",
+          "position": "left",
+          "url": "https://github.com/cuav/{仓库名}/edit/master/{{filepath_lang}}"
+        },
+        {
+          "label": "GitHub",
+          "icon": "fa fa-github",
+          "url": "https://github.com/cuav/{仓库名}"
+        }
+      ]
+    }
+  }
+}
